@@ -3,13 +3,1978 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Launchpad Leaders - Beta</title>
-<style>body{font-family:system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;margin:0;background:#0b1f3a;color:#fff;text-align:center}h1{margin:0 0 .5rem}p{opacity:.8}</style>
+<title>Launchpad Leaders — The MSME Transformation Platform (Beta)</title>
+<meta name="description" content="Launchpad Leaders is India's MSME transformation platform. Diagnose your business against sector benchmarks, develop through cluster and cohort programmes, and deliver growth with a vetted consultant network.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="author" content="Launchpad Leaders Private Limited">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="launchpad.css">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
-<main>
-<h1>Launchpad Leaders</h1>
-<p>Beta site - deployment test. Full beta coming shortly.</p>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<noscript>
+  <div style="background:#0A1130; color:#EDEFF7; padding:14px 20px; font-size:14px; text-align:center;">
+    This site uses JavaScript for navigation between sections. With JavaScript turned off you can still
+    read this page and reach us at <a href="mailto:connect@launchpadleaders.in" style="color:#F6944F; font-weight:600;">connect@launchpadleaders.in</a>.
+  </div>
+  <style>.page-section {display:block !important;} [data-reveal] {opacity:1 !important; transform:none !important;}</style>
+</noscript>
+<header>
+  <div class="wrap util-bar">
+    <div class="lang-select-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <label class="sr-only" for="langSelect">Choose language</label>
+      <select id="langSelect">
+        <option value="en">English</option>
+        <option value="hi">हिंदी (Hindi)</option>
+        <option value="bn">বাংলা (Bengali)</option>
+        <option value="te">తెలుగు (Telugu)</option>
+        <option value="mr">मराठी (Marathi)</option>
+        <option value="ta">தமிழ் (Tamil)</option>
+        <option value="ur">اردو (Urdu)</option>
+        <option value="gu">ગુજરાતી (Gujarati)</option>
+        <option value="kn">ಕನ್ನಡ (Kannada)</option>
+        <option value="or">ଓଡ଼ିଆ (Odia)</option>
+        <option value="ml">മലയാളം (Malayalam)</option>
+        <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+        <option value="as">অসমীয়া (Assamese)</option>
+        <option value="kok">कोंकणी (Konkani)</option>
+        <option value="mai">मैथिली (Maithili)</option>
+        <option value="sa">संस्कृतम् (Sanskrit)</option>
+        <option value="sd">سنڌي (Sindhi)</option>
+        <option value="ks">کٲشُر (Kashmiri)</option>
+        <option value="ne">नेपाली (Nepali)</option>
+      </select>
+    </div>
+    <span id="authLoggedOut" class="util-auth">
+      <a href="#" onclick="openAuthModal('register'); return false;">Register</a>
+      <a href="#" class="util-login-btn" onclick="openAuthModal('login'); return false;">Login</a>
+    </span>
+    <span id="authLoggedIn" class="util-auth" style="display:none;">
+      <span id="authGreeting" class="auth-greeting"></span>
+      <a href="#" class="util-login-btn" onclick="doLogout(); return false;">Log out</a>
+    </span>
+  </div>
+  <div class="wrap">
+    <div class="logo logo-block">
+      <img class="logo-full" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYwAAACcCAMAAABbRmxXAAAA/1BMVEUAAAADCVWoCQoPFGmqEQ8JDVDzGhkMEVb7TQRycAmkEA9xEA/9/QGiDA0DA/1qDmkB/f7rZhdpaGcWdBIbJJwE/gOpYBUObXKqqQf+AP7///8aWab0aWjzFmhpqRZ1+QeoFWGs9Qruow2oWFbqTwwPcvJYpljnVA9x/nAH+XhfEqR6A/war2hxc/cOrK0UrPUnsiKpD6lZWah1//z9+XOpqFcO969Up6fCCAinVaPxC6XzpV+nCfqq/1X/evpa7qkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADY5K7uAAAAQHRSTlMA+O4VHZ0HXvoDYAQBnwEEAQ4EAw0BBgQEAQEIBAYEAgYDBwSdBANcAgIFAgQDBAQEAwQCAgMDA/4EBAUDAwIEfru3ewAAKNVJREFUeNrtXYmC2ja3ViJjIiQsebfZlzAFZp/JJE2atu//Vle7d2Am+Uvai9okgGX56Hw6qxYD8AOFzOkfv/m335bgUs5eXv72/A+/AX+OLrw4ewkT8PHDBy4aF1acv2QT/8MHLhrTCyvOX6RgfPi4WrsXXpy7uCMhGEI0kgszzl2wFAwuGkt0EY1zCwZQgiFEw7mw44wlDkKkBYOLxh8UgfjClLOBAZbPRjC4dwtWI3Zhytl0VDyxgsFF4/nJX12Ycr4Y47oQDCEa0+DXoAsCCOH/vxjjtxIYH8l08zMZ2lo8eIjP8IQmOm+HXfVLBRwF+XAFWG2ts5skfbWa+lIWDC4a+aK1Xj4CRH54aVxKgSsv+VamlgyECmnC0o58l9f83SW7CPCfnyHsyyK7mjyy1APEVmdb9e+2adwUAQR4BdmgVeuGYAMFCQ0a4t1IdXPWTjVDpG1AY3S3c1Gemx/6vV6vT69fC4ZTEQwuGqCDeeTqWj6iScwMuZBf6UF754zhUFYG2Z8NMDwgavchqrltMZlMEI86Ye9dUXg94MJlhggpsFdPi28alCB1JV/byssgF4RUCgeZw5HyFlu6epOrNjLSyoXZctOvt9aHXAQg9f3cEim74NHXCoZbFQwuGqw98FuGnuRO8wrCoC8uFdLq3Wh6OBoT2FBDqjapscJjOQXP/TIUsnDWYULKvOmrphHoaJkLpB1CIWg0KDEW1rJt2FHTentB7uZda3sbLm3XVjIUGPjVAd9vNTA+dtRM10EHGKYDJTDuoOYBZ3lTm6jaMfFqo25VlYoCDn6tDAZUP8JOMNb2p1E7GLwf3HS0DH64iNT1DsuZTuG79tK/5wOvAkb0KjBy6HtWMH4rHKrMbSFz/W3fBUZQBwPeUMODaHbD9ZHXAgZIixvEGMXkud/R0V5UGcZHwchC89OEdoAhRcurj3tDnBINt6kjHtzHd10FAscDcexaMF4lFtORbwXjYxGGc4RbwEC0EwxYBwNtjWTw+ojkIG8Bg4BC0cxZjkghFsJ0p+MIFjoLFsMMHlAkhg5bmWCtL4vS61nmVeH0ggwGY4P/CLPJtEUJKGXd0pwgCY93AX0bGMtVIRh+XnwEs/lPA0MwzfPIETAYyUhUKBDJRkkD1AO1t7fu5pvAqNKraYNOxcQiISlWOCFJ82lLV6MGFyI7inq3+NN1asB4XZQ0X5QEw11+tOnCbIJeAQa1NgO2gMF/RsBtYRkCoMBoufQMh4TjGWSeFyjVr3oKCy+0Gww7KIq4dRUYxqRCK8r/kVZ0vC8VMIR7dWvJ7nUEQQqMBxCGKIRStZEC3h5IRtu3gRGQQhroujDlK7RKfhAMUFLVMAuqnlMLGEjX59YBQG+7+zJ7CeLlNufKf9OTZmD0Q2B46YaXUTBi8wBzghUaacW7zjiVqmnFyxy6ByRjezO72aSMgTyjvC/Qaqrl29TUrCQY/i4hhWj4LVEz6vSmxg0wYiUZSp/2RihpYRkqqalEq4eeqoCAl83iMBYxjACPO7dzr2HAu9UUtTZq0mSMS9y81YF1CXpWMOiLtJnAzoh28Ithn3PXPrLCAUn4JjDwuhAMb5WXvNzVgvwcMKJ3zT63gWH0xqgl2GxqTHhMMppgjKtuZEhhszMIL/WviuwIs1PAqIjMu949eBsYJcGgIFuOV4VooBYw6FEwQB0MPeD74IgB1/XSrKlnPW5Y0SvBAEfA8DP4qdmZzOj60MhNkxpConYw7IDqvxGMVSlXe0uWhdb64GP3p4ARmNjvCBhja+qbYPDyWskoDHM7GJSawVIVDespwWKQnwyGNji9N4Ax2qwKwSDJt9na8x+KCBDQNKsGkKeAYbiGdqaz8F6ZjTGgRcBdAYOPe2i70ZLn5GLh1XPrGoyYF/G3yv0JE3OiZOS3qA0MQxgs3CFU88oR6AIDoQDaIfU6MPLss7/6UJv6xiXRoHOSnBpnjLtcW145tl7kCja8KQHG7GoJTSILZqdNdOjaqSxhKkCJs9kMWZsBDoMRMwhaOpNqi5HqR/S041rJUI87wCB5ZLrxaslYloLvPzTbcTAp8Fltbn4CGBhZswG9Vtd2vkWpSr7dp/n8FWBMIJVFaB1eIMYwbYCxbgVjdgVbDLi1FIRAIxoeORkMAgo99UowpuuSTnIbJv3DKt/RE8HwYB0MouMMTnNu0IAkarcZaWDH4UmLIRrxfotre0QyOE9bXFs9JDAbZRYYcDIYgLwQpQW814KBSoIxWd1bN7KEUJC+HYwHIxmz/SzUUW1kg7waGLbnAWGng9GHLeUIGMLCEDnolB8KcYtggN1mtIUKmT15yU4Fwx05gfFWXheBY1TyY192DwjNIPRIVohGtlxXWLA2ZDSnzcIDNoPfiSMT0BHC4jIYEpynIgN/0iJ4COC7g4VbUOsLjjRj7kJeAMYYSeaOe7W+3OT4ucRBYsP8JKvFGd2ubSkN8jownJLFWP09QbmXclbEgVOy6v7PASOnxHjge7IEdTDir41syuESgf7rwfhc1ja3ugEIrdcVR3WHWdG8weR/D0aQldKCcwKSB64kCLhChWj8kbnVSYs3gpG52JgN7lI1wQjgzwejoabKqqxv88nUjjdi6sVVxvZBh2SAnwdGJfXx90tKlrB3HQCQbL/6H9rXenaDUfj3rWDMv+QmDbhR08IVm/FqMOBxMHDDm2qdXIqK5PQVqblXnvYqGGoP+n4WGNhfoJJgOOTTk+gg9+nw9W3JsPtrelN4IQEO3gYG8GgWqhC7x5x1VpeM2yING7PTbcYhAx6cAIaQH1RKDalbuSeECCEIUWo4Cqtz4J0GHBD81+vBQMtpLfFx5fD+9Z5xXl4FLTbPjP8mRRqtM1GIOhOFLYmbhFbB8DaBUdc0PwUMejxrGzTUVEMsqr6uRxSPS2sI8Kzf0l/aDUZOVqqTUfgKMLwl+rMQDGx7oZhZSh9mj9dFzvTHwMBF7BdUI/AwxXaO4Dp8BRgt6VzvJDB6PQ5F8tgK46hF6cDTwOCuqNJs3mskI1+UBCMQYIRlc5CXRKOY0gEoOQ6GpasBhjGQ78ZzVAVjfoUgU5d2t+SHJAN2S0ZkNVkkEwHUqU7ZeBqmSmnJOB8AY4RqEfhJYDw4jWkk7e3Mq8b9I1nNS9n+Ua9jygF1p9BLyQJjNkAdjMzmptCn14ABXwHGFpXiNgrD5RI1BaPLuJwGxhSyam5qfMpSndIiQv/6TzKidPyuCMu49S2JRpEsXKYGb5pV06iesXV2OaNYTFCzGQjaiWdWn1wylwC+Pt2bOmQzcMltLFITYpGt50lNGJdEMPvTU+Os0+tyJrbDkKRdYEACLXivAGNScqXuUorsuODkInBf7BH4+AnbAfRgxp2397KsOv0zrk3TtYBRDL9+yxz4vR5T4f8KjHF3ezEzbOwo48U1OA6Gh4qk7elglGIMP1/xyHs2LlZE8Gckkz9Lq3aSugMrllVWs2dB3UevubY1i6inmKsLEoye7FhEfhoYsAlGfhwMMIKNtVV2UZTuMSnAGHfGGf1iNdapYLhueXZ14vMQs1CYMIcgW/qFaCxtzo0FrvbcMpRlLUwuKfF2MPZ6DVOvmpuSzpZSt73NCYHfzwaDBDHsXBFm1uE1wIAds669giER1eaSj13uObg+8Sko5YG9l89li+HFjwhlrOT18adtt+tRSTSyxyuvwnT+uCTz0jSOAWPEg2ZIRIlVMsVMX2UYILtQrb4gAWtF0dsQTJfAzafXnoCKoKnQonxsFlMdJ6ipwoD7egAc2HRi1rlVZrbUxgu8qXu3MDZgmOkZ7pB468Bg8U4tulcDYOaZtZRctfMOQbkJoVArPJwvB98NTwLSr1tm9yKLpQrO3+tG5IZ5s/H8Zpcy/089ESky4LNub0oN03ImowKGZ+KQHg+Mw3TE4yeYkRUR1kkwRKDxJjDIcTACDI+s6C5dYjuTKGRpykCei+kYzmHWt65XbF1bhFCS5HlOp37ii75SOCOlKZvPq/L8kSu6VlnjLhbZ7QDGJdF4vPVqSp/zIUQ0iiIQYjskxkmxqrsDjEnJV6iCEXw36at3/WcxJKkYjRQXVj+n/yswQHd7CVTmNCo2h2gwkFhDSteBLxdH240MopG54dPtp9HzSJXn21v18bq87+M5WBWD3m1xsbVAzm2t5ymzs0yzyCyHtXmLyK7aLjZFtAR9apHYngKvVwLD3rGaesXa/X6hj8eml72/kleA8dQA45ABV6Nx3DKzFaP6s6xk3IHRM7i9HY3K67PlzCCz+rylVExNOSu1SYgH0HUtV6CGBCtE4/artQW08AF7fZmNLsjAjwUYWbtkZMkjplEbGNRnEGyKda79auvcbZ59fY1kWJHz6WEwSDGNhL2WiQasnRYAQ+2aRLVYvbrJoAxGewRZjOP4qWQN/CS5Thuxp8IueC7q0btG5NaynaUy4X/X7tqW5+k4y2pLcMLOOJj3sgg07TRQ1AlGserN7M/wOjJDBOrFRDzWaFFlRfBAlde9VisKOzaR2DUXB8BAmyL4LhmDb9+4mfTq9ykG+kXFVTGvIZLOUa+NWbXFCwx1gWGnIyCCVQ6xLWrfuSRke5k1l+qknWAUymB5eA2TnxercnYtXrUXaV1wP2PSg9jM03ddO6HiENPjYMysQcN23f9H5szzSVtSRtDkvmSkCMOtOzUjuSO2cjbS0ai2k2EedIGxtMtgEK0PVzH11IBDqtlqlKn1ysMJuSlmjGnHGpnpTGVCoBttW2bgkZeNTHJAksBGXuuWPrkDOV+bAKffVaA7K1ZA+b99VMW/npI8R2mvXeWwydzXNX8r5uQDNN08iO0NFo9er/8EQljPKTFK5LO3DR29/BNdy43FEaoraZfMkWq81LpYpnCl875maaO8H+bN0wNcdcV/YMWalon87bF95ymdZoEk1MPptlnFywhWbYL9XDruV0HQZLDcphHwaPnq+HyM25ryoXCd6w3mUWObOUgfnVLuqfiEQ72aUuejRfM49NpWnhZ/Vxe7LGFnojyM9W48SVEU6SZCUFmMjmxWvqF19IKjsLTAaG1yVO3pCL0d3cWta7aITcXo7QGItBMPGQFh2GaZLEthc14Zu26SJK57/GAp7OAEO76L2x7QnjY6lFKqWfED95Wv/QoHVtSPc4ClAx7ER++XIPF/ebYH/H94csilXMqlXMqlXMqlXMqlXMqlXMqlXEq5eKclKX5y/Ay7aDlAqOe9ouFzB/xqjzOJD+WpPNyZ1iO4a9+XB3yZx2Ndd7bw5GCS5+AKJFLvUZ3ZtJXQOBQZ4MoJbwDGiBDvLMmmIBAJ22D7cqCjhKComtlNTaaXumHHe4HS5RWvdje/ar8s9tXxFsYw4kU1qRK0kw4q2ApGEWwv4jgkU2+ZofKlVOeVfUSbS9bJlmXieMq+PgCyL8YCnBESXOOziIacxYK7Q7uvu+dCxWRo53LMvpxacrrAaE7fqqmLTlXSPzCpXJxutwXRu5YNACkALdMZU7qsTWWpeSwvIOeAQoPRdYarYtwhMMIO/vl6hQtuv4465tLF1GUHpb1uIsrp3WXUXqlt1pWSca+FAhSeRUtZMLLuLb+ecwgMQA4IxoHzSEnXwoZel3ScBsa+cwVzk5SARO0Vlxk4o5oaJQcsOD0oGU0wvM0I60Xl796NUUaQ1ypv3VyD7JVglPqDYXc9PLKU+Dny0L5n9Vi/vCpo/CX8VcFQ6y57XsVoKmNKyVMLo3clTov12wh0g6FbE82VVmChDjXVa7Ph0XXJIaJrtXCkXLFvzz7c25O4UQ7MmjlrqSJdsbeJzgmGOLL5iM3otSkkQlrmvrkBsis1xTal1rPDPf3oiiqHvXfdyk0fC9Pm75WWxFPTI7epM3t32K5gcPP90u5sEX4v3Bt29EAGwa8KhnaMmBxlY17SK15SPSvaIhkE6e0aetVMm2hYMGKYpkLo9o80LI756wKDhXdf7p7SMLi5EURccWLSyrE3dKJlHYpGxZ+vlJqDQvqxbfh6UiywvV2iNOX+pBdisOn1NrNFcg4Lbg344dde9fXJS7yIAzjSMA4F42S8RL0WMJRg3OvV2qMDkmHXSyyRt4kwYPrIlxCNWiUjfHiI45gTIP4Ow0YMHqxNjwgnVjS+nFud2Cv0H13b5VThPHW5jPsgpwsK2JigCQFnBQMctRmnNzpzYHmz2HrtnQCGLllutgrlbTbj6BFIk09RS7NMe8a3VgGgEB886OC/AoYJ0CIn6jhwvAsMrm9mekcbRLRVMo6VdjBSGKuBkZfAgDXN9d8EI7o3+zzUItewxVP1ghYwuNrzOleYnyYZendhDYwQNw4NCLs3yPyXwDCHUcSaMa07WFvBgAGCkTY447o8/QgYy3Vjn/qV3mwcyYQPIb8EHMr32IITDLg43cQWrnxacpvyYK1nbWv1QvR3fyen2wzriPKgoA2MyBIRBHLZf40IZMCoptf2RGnO70VyNzT7EzGEy+WW/TpgXL0aDM/rAMOu1w+X6MCmFtQFRgCi1uMP9ImHqFIAqB0/3A6GCXxKBJPAbE4V5+BHMMt+FTDA9riaaq74XqJ2MPQpdDOS7zu3THdLxgiMWm21/DGtKVTuXme1MFQ3W926sdSE4JJ5QuZQhB4cA7AC519MejoYbanX9nkK7UPd5Xn3cXfdYBg3NDrNm/JAOxiwUoXV96kTTimCte0V511lbQ34cTXV3CwIoibp2Yv2WyLwkFKC7ckJW+qeCMZD60GpsGPHYl0FblUmVuy/w/K0ILSY2tMh78u5cZHzKO/B4ngI/PcZKp8k9IuC0SxtezIev42rZkJvl/tRMLpenFSXlbmJM4oyNu+miUjt/JlMH09Vfu0ZwHsvmKF/Gxhtp7abmaiIwPIDmvMe3WDMQfsRwl1gVFV98ALrElSk0LM/ansIA2o3TpfmlpCH5mcAw/shMMZtCdRRPbsqmfGdolO9qXYwuiUDtcUZ7VPEy6AinmQ5ybkh38B+dffwmRyrV4DRa04kZN2iRijz1JCl5h0t5FQwtNUft+WmmkTUNtJ3gdGPAM3SXTX85OaBqclxq8pUCj3/xW3GaRG4o52eYgSat17iU9UUoaDbtT1KQCsY0lfqfpUzVGdww9Jpt94vDkbQ8rLfRnukecbpuPZmjWNgBOTuXXecoZcJddJgTswzxR5zmx2bvONyfm3OYpk//OqScdJaoq6Z6t6pETiyGa03SYad6auYO7G06hgYyxQm+hTF1t3+/z41BU87dPEAGDGyrz1qBeMIT9eZapZS/n8QmcPGGq8kaSnxMtZQ9shZXdvAPTY9cRQMNLk7dCy2eI1leUFQKxhkfq/j4h7omM84wiaKjWSEKp0ZmZM//KonJdeeZkHVVJvj8dJzuLZWcdP8h8EA5CEMDhy6GOGK+4VaJ5c8r/Vg39PB8NyqmjLLs6C7r+dNCKEvk2q/Q0De8ObJnw4G+AlgmFcFRGbxDZRLaSPP5G7LIXsbGIzlOpvSY6DDZsQnOuu0FiWNa8sEORYzbrWrxsFDGgzvnGC4PwEMFo7qxwrLN6oT/Zrge+BtDoPh2bPxII7iNxnwJhjWbFTrCcp6/Q4P5ImeA4oqR9SqD89DaF46YsWAIc7OJyiWdfgfJDldfkd3bM5hxjhJ1qrghO4jG1KzFjACIpZ58AbFf3ZVKMbzDsmI5fvgBBn8j1itgg6DYQ5Qlq/3LnmyGZAnH86oPJcSoIzIc0LONxdrwKDyLenac+d/MPJHdTA42wJxcKCOk6B4Yw6cZrv6qGo5QMvYZNwSZ2CoWpOBl1421aKkNBh7RaQAj/8N5LohVD6RtWVyCRuzMS/WIwCUQHMgMMJiXwgCjxipV8O96xN4TsloluQkNUXzMLaCkXatzTRmkdAGGCXoPPsW56ekC4x2P64NDNsnZpfRbwC1v9rj/dRCa0ShQ+zBtCw7Ixg9tVtEv/ZdfoNTrwrGO3VJ19H7SyCL0rBqKVte2lzkbguczIKEluxqT7z6oEOZ9800hiRDUQHLK6ubCxIykofMRBulkwvnsHTW4q1MT5k1uWR5xnTI4RgtOrgloOYL8PiguZcpp0s1ebdq2Iy2Nlf4NbG9mG0vZuObYBCSI9R49zKaBNWppV45vRsvfzEwYE0yOlbZ1xLtEKB1Zxa+f/zRvYibce+VYJQ8smu/JZZE9kjqaiKttWN9UHn7zz/u2h7LXhySDDuGIm16g5az5QCOQC0t3gbGgX1kB3culXnnRi1W0MNt7172Spna0uTSefbzST+n61jDvJyK7Tz8EJV6J3/gY7NlSxpFQLZRCbHqrcop6MTphKOTCFJaIRKqHolzvssORK47WgXphjtiUb9krcT1hXs2MDqvFG/vYNnBvHPdPrhNfUtGetPgkWRdgh+vO/Iyvn8o9i/a3W2kXVpNKj0jW7/t0YwsZZRSSsijiJ4LCxHzNqcFRPTlFRmBMN/rXXNSE9vVqny0B7Q00Qax0LU0aOZV3TwXfcYHTzNMoZd3p8hySkHnmzVK3le8obxHwJlUhgmaLamMZaqDz3c9oasMlgTAcJam4FLOWmTUeTkQ8VIu5VIu5VIu5VIu5VIu5T9U8mfmLoNRMpm/fHceLvw4awmvcnf3dQ3ALnm5AfTCkLOCMf0cP4Kl768AW/19SUecteDb+Ab8Jt4p9NFnT/+VXrnYdXFRXFd8ddU/CBHXNb/w/8XWVbmWRlwgCNuK8l9CVEOEiDtlTf7HJapgV1yRvyEkbwBY3Skqu6K6utsVl/nvqgnzfNkuQfwpuVwGlczW5nV1H/17OZ0QCjLFHfJp8pN+prxdbXVVBEniXNd20zzccEC1wT9yykoUmIu21L8XvBPk1y4JSlxFiWYJNrwXvOA9uGOpBxir7whuvGSq/MnTy8I8KHYSq1t1BbW32Ks14Kl3mYqPDDCR9TSbkL1K4/rHuPZc1aZccu/ljMXCXrNV8U7Aj0SAkcTfkQfi1CvTWuT0VbsMaPJNw7LEJQKKWz3bM88rdckrygGGVR+gCQDl2wRTPL0QCY5XYrvq2pm67mRi4ZtMJr47nZYA9X3+S/UnU6buVFfx/eovbyv23sl00lFl4vrPMlVaeiX2B18sbnK+bYgko0mBP5m0tmdq+/KPr8j3RX+q5FRu0KRO7Q+q877kQnFzleoaAb6hyxe/O77L7gQqg/f/ujIQk5w4jT9aMH4TvwR7Mnz/Ly1Dh4m35A3/rWCg5xoYbDH614Lx3pEvlnX+hUVIdJhU1BQHI6T/ys6osvDcf7ET6K2LN5d+HC3+I/76UdCwquIWH+vFPa2Ftiv2L9OU22za/oZ5S/yz8si/XFnXdnXnm8648mFvJ+jkUiLUdU+u7XbR8y8Pj2Y3E+ALs/GbzyYEXMo51ZS/AxOxGscH3gxc0iHnlw5p9LB74cQvYvIuUFzKpfz/NI7z+fxHNhvk/+QRM4gA6sXZ7f053EPkM2++9PJd+7b/5TzPU8JY8AO7BaazjNz8AInsJo7/OYaw7Yg6/n5zcwYw8oe5v5wvY69jve8XECCH7PLXzETaZL34W/7iZ8fvqH4tPoVmu35HpdL0SZ2C+s+n0L5aPcgP/9yxdAWRm/mEATCZdyx3V6u279H2B6aFRfrn9o10avH9B3VGwIAzGAyuNj/BV37tDfP1JnCcWdoBxlhSNg62p4taLb+GwfD9gB0Mo1RKDojxj5AH5k8i0gfTOe+My58+cAQqPpOV8E6KSZzKeyB2WflhsrmY3lRJeBUD009yGiB5c6ptx3Y3NKWA+AAdPTSKIBZoKglIbzi737/3YXXk57Od5A1mkjKX3bxiMA9q2dyhylJ3dp8tROZ9KPf6kh2bzh1522J2Z5oauvH6i/zifLmSb25LZq7KfjvlrP1AKv0g+VRJfg9fk91AjD99OBj88SbJcMlmmzx+3V2v/3aG7x2EN9dHHjcR7FdkDvybVHxbobwyEKYZWn0RcqYoe2H+yYoCvhqMbSAZOlDjilD9DampquFg+P739wmm8tsALOYF5LzdsAoGf06eP5C3gxHyhof838e3qal8dCf8RzYV9A1A6B1T75EFQ4y5SIFRtVc7AJ7/Ul0WlN3fspN3JSPiJu5aDM7ByJ2u1/QYGNP1lWToUFaaJDtHYZh4YiSIGavB+wENFBjvXTqXu64mivmJAHI4klORvi/fkrH6TO8dOXnJa0+nE3/FXmPgxNMQdnL2JjAWs51Qq1frOyEZO3zspMH4SrBfUivRE3Lp423F8HBDMaEajBgH/i04+fxCtCQsTVMw/J0P7qe7z1Iy4gV3FzQgsUw4F4LIJqIKh8PlNVJfqzlHsuW969FvkH/8/ojU7wOxU9LowgG4ScS9oul0xj7Lnaxccj6PxPy8K1r5yjwqni0THcptUXTggOs4S5TwZqRH4yw4GInz9BCIp4gku6vyVki9fNGVbYnbXNfBrn7NqfDoHNeN+eAY8e5OEdwwfwJCynIg0vDGo8MLgCoOXhhIMLgs7USXEvFt6myJ9hEFQZj/5CT8kY6QDGfC0gfRhiMzN7yiS/R6GkmuI7uGi7wOTnxH0DRyEl5PSob0yfZ5zNiLPgcC5WArfax4JBg6ELUSGM1SzsOBYKMUhU90kl8/GcU05IwnqXuNJHziDvWJCPa8THx1mFsexj5CCRGSMfJnwT2Qadh7c2763TwnfzDhnIhyhWZZgORYZBTumZAM/vFqeaN2bLPkRsQe6rTHnLu9CykzaSL0Edhm87vJCmsxuhfHFcnuxlffeRfH359yc83NvOvQHMExW6b550wacMH+RZpkSSB7zb9NHLJQDg9LiRpU/NmjWKmp0WY2U7vN0gV7JpygpXjCmqlegs960yD6ap2ERCknX4wh8Uk5RWPirTLpn/Ev12w7LYHBSZmm+FraaYEHb1p8AjS4u1kYMMRg37i3L6kYThI+0fwQiVd8LfZPXyqOhKycvHxO+MP4M50E+PLRPohcljjyR37p/vt8BSaKpjvkcPUydJ0kXygXd7AG+f2EObqN0BnsXFmVfRJXF8Cf3302XfK2gSPI4rXZZ8dBzu7uu3EI2SqbO/ah6dS/kvGMkowFWi+AAWPq8N7oFrneEpzhNz5JynjLM19RxvsTfs65M3klvm00hYME6EdYo0ecKhjKoDpsdUuNfR+Ab3exklQkqhDxk5/fcmMz/Etaauk9OCPAkFIVYmCIVoUkDvVnFFrBK8UlBRgsFp0cSEfs2hkan4JLNG9AWc2/xivkqiuD28y6HcwfGkKDRDxbtjF//17dNtC3uBGFyDh9q8I1kk8fBdadGfpsShwp9PIbzL7JgfwkbvkkRYf/nEnJwFeG0sHO+if2J87soV4DAlZyHL9///vQUMhH0qDwLCtgJAoM6ZKJu4NAEMe/DEXtxyuBRqgkQ7Q2gntBjTMV3HAftTflWpd5KIXlWsI0UE+Q3tRQlcG6IRnA17ZmOJBO8EA+2v+iuKbpWHC+K5q4xRjIzw4TzDaELmwbI3ub6dNfmCqXUxpgOY65AzjwEjEU0qK7Qz9k5YcmUi2AW9kXRRaPx6ScSIuofnLYYCg7yKVNfBgMpfCYq4B+0tzVvNJAqIsmjNVgSFurL0jeQEdjJmTveQFKYAgUGCZCMMRHEEzHelhxAsTbtAdqvA2U+fanCm7uKVjfcJ02wFhIMIRL+IU4AxHa+sZrGfpKxHwsbShXVc7M2Iy7kemOIHRs2ggX3M125W2yG5LQKVclQH1ZbLTNABDxSz4z3ZX/IsFGV8m470jV7t4aYfpdOicy6MMP/kA+W4XLvB/883embMb9H0KPqqvc2KxKdGqKNIFDw4mtthmBK8EYgjDVhnxgKg3liJNqSlWeinpIdm+hvCnRthqEA+GH8Ftz0dhqP9X1B+LlfnIky+Lc39XAcIWLJKxRyIVSurjsSdEhn0PXseDgwrFSHaKMg7F2PIV64qRCbY5kGzFnXyJ+higWo+GBy+5Q+OByCDxSAT4EL0PhjVGAxdiSfaezvSTCmcnnpMGtoAzK45+RtBlSrLkGGGMpGUhlx3zJLHnXdKG9KQcryrmV3AkSPwlouAuoXM8owFLbc09rUIBBqmAMRvgKjCQTLOtEIxUwlAEbCN/IVXodZNK3k8p6JC/lnqOtnOMBa8Cteiy/5kCD4cr7dhQQcmegFRyRcjh6Ee0t9kK6uCJIWMSQlAzZ5SnKM38vbp/IZyOmwBjRmdSp+y+R7BN9sg072l9ZUBEIObHg1yaY7aa3iaH7Og2YVGESDCLjjD90WiiXvpXPDaFpkDNacV9FQEOlrQlaBTulfBj/63qxkVZtFF0JVjruAkibqMuoBgZwVghoMIqAU9nbWIMRSqTlgHS16K2n08T5rGQ8kLTQXJnuIYB/ScmQgpdwT9Z3pzdx2AEGVyVkWaQGlGRMvfwmFyMxZ1Ota/8cOxoM0bcFC+IgF0Ih20hERlWGo6rrNBhLwlMyKNINqrv02hN2L1b61s9mni/NIP+LThdMjoQraMFw6ZWDMI0eZ+KbcncLHonxYo2mCv14b9NkJL7L4eBQ1Ut4daPcmsVBMJK5BWNQJPDkIRmxsRlS7XEy77Cr1AYGo3X+hQ9OpU7F46QFEH25x99ku9QEfflTls0rkWuhpjgjZ2gnnbMgVkZBsCBe0An/N2HuBjhKAGMFhhyOfwR30Rwp7SiYDxhYBIKnsyv5PZwHVqQHDo9chLyq8YpumYRN2KdtED4E966RjHh/VQLDlWpq+kT+zCn8mstvK3Hb0PkKdI8lGExLhvxx5GxZjmTPffG4WaJ6Ofsy1kq4BAbbKQhQYOIM4TcZNQUivaL9a1pGztk4aiyEUkYA97wc5zP2nWhlPJoh2AsW80ojtFCSIUL9oYg4kwDM3DoYjnglghpQcjR/Sp8UtwQyXG2vZfohvRHBl+qXkQxxs7cI3FSZwoGW41TyVElpmKR2gIGvwV6w+LtIeg7mfrL4JmqOpB1M1o4NIty5q8DYJbm1GQ4MhNIKr6QYfBPiugapGn5YiNc6QSvFb9XIgxsslCcio61gpXoJkZIUHna5JcnQA+QL0GAEQOWoQmMrfeFrPpfBCFKpw5y5r9QU9+q0NZAdcRUYUGcIVd5BdEbkXUxpelNIgsCtpvqXAeWQlcFINv5ABN06iSae6mPhTvjm4XM9RnmlEhiAm2sLxu1G1sy0sHCHQ6ragVa4QiqB8IHdXbAGJTDUl70EA1zJb774S+QHV1ZNTUQ0rkRc+MxD7QLxLkgXwskypcRbwdCubXJjwMAb/a9wGbmiUj70RA7lSWL8YEnybKXZqM2qCHGG4FGBEVHOPu5dOplOQMp0yMAEGpWpC+mwJloyNio4UdpIqym4no4c5TW8V8+RGTEOroO4Zf9dP1ybEJnJkGBgBUaQwEJNJdrPkDbMdQYulu4aGdqHOvRePHS0VqZkJw+lIpIshyowHiTnMxn/uYnquLQ0A3fgXKsR8ahCF0dFK+IB3PtcKSuGJUT8Oy3bjK1mvQWDQszk8J8ZazfkQYVK9mswHIomwrF273U0sXCHdr8BokpNBQvtriBsEBwaN/29GFQlyZCaGSkw6Je9MzGxvwGDrbUttcH2SNsMmlFrRAefUGDVlLQZyIChNDTUdA4FHwI5WHjjEuUnzzQ9dGMsHzadolg+fAVKBlxLhnxqApmllJuHh5H27pWa+uRYR0RELkRyQ9kMDoaSlAQo4dKZWRCL9IirnAD+SZykpHLLHo/mxSD25evwdCJUJFYCTyRXkht8Fyeiqs9DVOng8ZiPJTd7Ed2Cl4kDeeXNY0gnohKasUGpVDL1jqyA5H0guE4+AyFBAz5sB7m8GOeLG/4vvmbyCn9O6lJJC+W+DUADJWxjsot5NU+oKSLbHHn8OwHcoIhYff/ZlzVlB2+g7B/nE/+W3j0y3V2ukWKRZ8IhCsW/boy0YhWU4GLOk3/bp6oNBw8GFKP7tWjeYYoy4ovZV0UZ9Sdz8dCF6qU8mlESKHzjwf8BrqHlhAQRCYwAAAAASUVORK5CYII=" alt="Launchpad Leaders — The MSME Transformation Platform">
+    </div>
+    <nav aria-label="Main">
+      <a class="nav-link active" id="nav-overview" href="#overview" onclick="goTo('overview'); return false;" style="color:#F2762E;">Home<span class="nav-sub">Start here</span></a>
+      <a class="nav-link" id="nav-diagnose" href="#diagnose" onclick="goTo('diagnose'); return false;">Diagnose<span class="nav-sub">Assess your business</span></a>
+      <a class="nav-link" id="nav-develop" href="#develop" onclick="goTo('develop'); return false;">Develop<span class="nav-sub">Join a cohort</span></a>
+      <a class="nav-link" id="nav-deliver" href="#deliver" onclick="goTo('deliver'); return false;">Deliver<span class="nav-sub">Find a consultant</span></a>
+      <a class="nav-link" id="nav-about" href="#about" onclick="goTo('about'); return false;">About<span class="nav-sub">Our story</span></a>
+      <a class="nav-link" href="#contact" onclick="goToContact(); return false;">Contact<span class="nav-sub">Get in touch</span></a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" type="button"
+            aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu"
+            onclick="toggleMobileNav()"><span></span></button>
+  </div>
+</header>
+
+<!-- ============ AUTH MODAL (demo login — see note inside) ============ -->
+
+<!-- ============ MOBILE NAVIGATION DRAWER ============ -->
+<div class="mobile-nav-scrim" id="mobileNavScrim" onclick="closeMobileNav()"></div>
+<div id="mobileNav" role="dialog" aria-modal="true" aria-label="Site menu">
+  <div class="mnav-head">
+    <span class="mnav-title">Menu</span>
+    <button class="mnav-close" type="button" aria-label="Close menu" onclick="closeMobileNav()">&#10005;</button>
+  </div>
+  <a class="mnav-link" id="mnav-overview" href="#overview" onclick="goTo('overview'); closeMobileNav(); return false;">Home<span class="mnav-sub">Start here</span></a>
+  <a class="mnav-link" id="mnav-diagnose" href="#diagnose" onclick="goTo('diagnose'); closeMobileNav(); return false;">Diagnose<span class="mnav-sub">Assess your business</span></a>
+  <a class="mnav-link" id="mnav-develop" href="#develop" onclick="goTo('develop'); closeMobileNav(); return false;">Develop<span class="mnav-sub">Join a cohort</span></a>
+  <a class="mnav-link" id="mnav-deliver" href="#deliver" onclick="goTo('deliver'); closeMobileNav(); return false;">Deliver<span class="mnav-sub">Find a consultant</span></a>
+  <a class="mnav-link" id="mnav-about" href="#about" onclick="goTo('about'); closeMobileNav(); return false;">About<span class="mnav-sub">Our story</span></a>
+  <a class="mnav-link" href="#contact" onclick="goToContact(); closeMobileNav(); return false;">Contact<span class="mnav-sub">Get in touch</span></a>
+  <div class="mnav-actions" id="mnavActions"></div>
+  <div class="mnav-foot">
+    Questions about a scheme or the platform?<br>
+    <a href="mailto:connect@launchpadleaders.in">connect@launchpadleaders.in</a>
+  </div>
+</div>
+<div id="authModalOverlay" class="auth-overlay" role="dialog" aria-modal="true"
+     aria-labelledby="authModalTitle" onclick="if(event.target===this) closeAuthModal();">
+  <div class="auth-modal">
+    <div class="auth-modal-head">
+      <button type="button" class="auth-close" aria-label="Close" onclick="closeAuthModal()">✕</button>
+    </div>
+    <div class="auth-modal-intro">
+      <div class="auth-eyebrow">Launchpad Leaders</div>
+      <h3 id="authModalTitle" class="auth-title">Sign up</h3>
+    </div>
+
+    <div id="authRegisterForm">
+      <p class="auth-sub">Demo sign-up — this previews the platform only. Nothing you enter here is saved or sent anywhere.</p>
+      <div class="auth-form-grid">
+        <div class="auth-field">
+          <label class="auth-field-label" for="authFullName">Full name <span class="auth-required" aria-hidden="true">*</span></label>
+          <input id="authFullName" class="auth-input" type="text" autocomplete="name" enterkeyhint="go" required
+                 onkeydown="if(event.key==='Enter'){event.preventDefault();completeRegister();}">
+        </div>
+        <div class="auth-field">
+          <label class="auth-field-label" for="authOrg">Organisation <span class="auth-required" aria-hidden="true">*</span></label>
+          <input id="authOrg" class="auth-input" type="text" autocomplete="organization" required>
+        </div>
+        <div class="auth-field">
+          <label class="auth-field-label" for="authEmail">Email <span class="auth-required" aria-hidden="true">*</span></label>
+          <div class="auth-field-with-action">
+            <input id="authEmail" class="auth-input" type="email" autocomplete="email" required oninput="resetVerify('Email')">
+            <button type="button" class="auth-verify-btn" id="authEmailVerifyBtn" onclick="sendVerifyCode('Email')">Verify</button>
+          </div>
+        </div>
+        <div class="auth-field">
+          <label class="auth-field-label" for="authPhone">Phone <span class="auth-required" aria-hidden="true">*</span></label>
+          <div class="auth-field-with-action">
+            <input id="authPhone" class="auth-input" type="tel" autocomplete="tel" required oninput="resetVerify('Phone')">
+            <button type="button" class="auth-verify-btn" id="authPhoneVerifyBtn" onclick="sendVerifyCode('Phone')">Verify</button>
+          </div>
+        </div>
+        <div class="auth-field auth-field-full">
+          <label class="auth-field-label" for="authUsersSelect">Users <span class="auth-required" aria-hidden="true">*</span></label>
+          <select id="authUsersSelect" class="auth-input auth-select" required onchange="pendingAuthRole=this.value;">
+            <option value="" selected disabled>Select from the drop down</option>
+            <option value="msme">MSME</option>
+            <option value="forum">Forum / Institute</option>
+            <option value="consultant">Consultant</option>
+          </select>
+        </div>
+      </div>
+      <label class="auth-checkbox-row">
+        <input type="checkbox" id="authUpdatesOptIn" checked>
+        <span>Send me programme updates, invitations and learning tips.</span>
+      </label>
+      <button type="button" class="auth-continue-btn" onclick="completeRegister()">Continue</button>
+      <div class="auth-switch-note">
+        Already have an account? <a href="#" onclick="openAuthModal('login'); return false;">Log in</a>
+      </div>
+      <div class="auth-back-link">
+        <a href="#" onclick="closeAuthModal(); return false;">&larr; Back to the website</a>
+      </div>
+    </div>
+
+    <div id="authLoginForm" style="display:none;">
+      <p class="auth-sub">Log in with a one-time code sent to your email or phone — verified through MSG91.</p>
+
+      <div class="auth-method-toggle" role="tablist" aria-label="Log in with">
+        <button type="button" class="auth-method-btn active" id="authLoginMethodEmail"
+                role="tab" aria-selected="true" onclick="selectLoginMethod('email')">Email</button>
+        <button type="button" class="auth-method-btn" id="authLoginMethodPhone"
+                role="tab" aria-selected="false" onclick="selectLoginMethod('phone')">Phone</button>
+      </div>
+
+      <div class="auth-field" id="authLoginEmailField">
+        <label class="auth-field-label" for="authLoginEmail">Email</label>
+        <div class="auth-field-with-action">
+          <input id="authLoginEmail" class="auth-input" type="email" autocomplete="email"
+                 oninput="resetVerify('LoginEmail')"
+                 enterkeyhint="go" onkeydown="if(event.key==='Enter'){event.preventDefault();completeLogin();}">
+          <button type="button" class="auth-verify-btn" id="authLoginEmailVerifyBtn" onclick="sendVerifyCode('LoginEmail')">Verify</button>
+        </div>
+      </div>
+      <div class="auth-field" id="authLoginPhoneField" style="display:none;">
+        <label class="auth-field-label" for="authLoginPhone">Phone</label>
+        <div class="auth-field-with-action">
+          <input id="authLoginPhone" class="auth-input" type="tel" autocomplete="tel"
+                 oninput="resetVerify('LoginPhone')"
+                 enterkeyhint="go" onkeydown="if(event.key==='Enter'){event.preventDefault();completeLogin();}">
+          <button type="button" class="auth-verify-btn" id="authLoginPhoneVerifyBtn" onclick="sendVerifyCode('LoginPhone')">Verify</button>
+        </div>
+      </div>
+
+      <button type="button" class="auth-continue-btn" style="margin-top:22px;" onclick="completeLogin()">Log in</button>
+
+      <div class="auth-switch-note">
+        New here? <a href="#" onclick="openAuthModal('register'); return false;">Register instead</a>
+      </div>
+      <div class="auth-back-link">
+        <a href="#" onclick="closeAuthModal(); return false;">&larr; Back to the website</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<div class="page-section active" id="page-overview">
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="eyebrow hero-eyebrow">Transforming India's MSMEs at scale</div>
+      <h1><span class="s-diagnose">Diagnosed.</span><br><span class="s-develop">Developed.</span><br><span class="s-deliver">Delivered.</span></h1>
+      <p class="hero-sub">We help India's MSMEs close the gap to their sector's best and unlock sustainable growth.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#diagnose" onclick="goTo('diagnose'); return false;">Get Diagnosed</a>
+        <a class="btn btn-ghost-dark" href="#contact" onclick="goToContact(); return false;">Engage with Us</a>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <svg class="ll-art" viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg"
+           role="img" aria-labelledby="heroArtTitle heroArtDesc" preserveAspectRatio="xMidYMid meet">
+        <title id="heroArtTitle">A growth trajectory rising through the sector-standard band</title>
+        <desc id="heroArtDesc">A plotted line starts below the sector-standard band, where diagnosis
+        identifies the gap. It climbs steeply through the band during the develop stage, then continues
+        rising above sector standard through the deliver stage.</desc>
+        <defs>
+          <linearGradient id="hpTraj" x1="56" y1="376" x2="412" y2="76" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#FCD34D"/>
+            <stop offset=".5" stop-color="#F59E0B"/>
+            <stop offset="1" stop-color="#F2762E"/>
+          </linearGradient>
+          <radialGradient id="hpGlow">
+            <stop offset="0" stop-color="#F2762E" stop-opacity=".13"/>
+            <stop offset="1" stop-color="#F2762E" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <!-- blueprint grid -->
+        <g class="hp-fade d1">
+          <line class="ll-grid-line" x1="120" y1="30" x2="120" y2="380"/>
+          <line class="ll-grid-line" x1="194" y1="30" x2="194" y2="380"/>
+          <line class="ll-grid-line" x1="268" y1="30" x2="268" y2="380"/>
+          <line class="ll-grid-line" x1="342" y1="30" x2="342" y2="380"/>
+          <line class="ll-grid-line" x1="416" y1="30" x2="416" y2="380"/>
+          <line class="ll-grid-line" x1="46" y1="72"  x2="470" y2="72"/>
+          <line class="ll-grid-line" x1="46" y1="134" x2="470" y2="134"/>
+          <line class="ll-grid-line" x1="46" y1="262" x2="470" y2="262"/>
+          <line class="ll-grid-line" x1="46" y1="324" x2="470" y2="324"/>
+        </g>
+
+        <!-- sector-standard band -->
+        <g class="hp-fade d1">
+          <rect x="46" y="200" width="424" height="52" rx="3" fill="#9FD8E0" opacity=".075"/>
+          <line x1="46" y1="200" x2="470" y2="200" stroke="#9FD8E0" stroke-width="1" stroke-dasharray="5 4" opacity=".5"/>
+          <line x1="46" y1="252" x2="470" y2="252" stroke="#9FD8E0" stroke-width="1" stroke-dasharray="5 4" opacity=".5"/>
+          <text class="ll-mono" x="470" y="192" font-size="9" fill="#9FD8E0" opacity=".8" text-anchor="end">SECTOR STANDARD BAND</text>
+        </g>
+
+        <!-- axes and ticks -->
+        <g class="hp-fade d1">
+          <line class="ll-axis" x1="46" y1="30" x2="46" y2="380"/>
+          <line class="ll-axis" x1="46" y1="380" x2="470" y2="380"/>
+          <g stroke="#9FD8E0" opacity=".3" stroke-width="1">
+            <line x1="41" y1="324" x2="46" y2="324"/><line x1="41" y1="262" x2="46" y2="262"/>
+            <line x1="41" y1="134" x2="46" y2="134"/><line x1="41" y1="72"  x2="46" y2="72"/>
+            <line x1="120" y1="380" x2="120" y2="385"/><line x1="194" y1="380" x2="194" y2="385"/>
+            <line x1="268" y1="380" x2="268" y2="385"/><line x1="342" y1="380" x2="342" y2="385"/>
+            <line x1="416" y1="380" x2="416" y2="385"/>
+          </g>
+          <text class="ll-mono" x="46" y="404" font-size="8" fill="#9FD8E0" opacity=".45">TRANSFORMATION STAGES</text>
+        </g>
+
+        <circle class="hp-fade d4" cx="416" cy="72" r="74" fill="url(#hpGlow)"/>
+
+        <!-- the measurable gap -->
+        <g class="hp-fade d2">
+          <line x1="92" y1="252" x2="92" y2="367" stroke="#FCD34D" stroke-width="1" stroke-dasharray="3 3" opacity=".6"/>
+          <path d="M88 257 L92 250 L96 257" fill="none" stroke="#FCD34D" stroke-width="1.3" stroke-linecap="round"/>
+          <path d="M88 362 L92 369 L96 362" fill="none" stroke="#FCD34D" stroke-width="1.3" stroke-linecap="round"/>
+          <text class="ll-mono" x="101" y="313" font-size="8.5" fill="#FCD34D">THE GAP</text>
+        </g>
+
+        <!-- trajectory: shallow drift, steep climb, sustained rise -->
+        <path class="hp-traj" d="M56 376 L156 351 L246 225 L400 87" fill="none"
+              stroke="url(#hpTraj)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <g class="hp-fade d3" transform="translate(412,76) rotate(-41.9)">
+          <polygon points="10,0 -22,-12 -22,12" fill="#F2762E"/>
+        </g>
+
+        <!-- stage nodes -->
+        <g class="hp-fade d2">
+          <circle class="hp-pulse" cx="156" cy="351" r="14" fill="#FCD34D"/>
+          <circle cx="156" cy="351" r="6.5" fill="#FCD34D" stroke="#0A1130" stroke-width="2"/>
+          <text class="ll-mono" x="54" y="338" font-size="10" fill="#FCD34D">01 DIAGNOSE</text>
+        </g>
+        <g class="hp-fade d3">
+          <circle class="hp-pulse" cx="246" cy="225" r="14" fill="#F59E0B"/>
+          <circle cx="246" cy="225" r="6.5" fill="#F59E0B" stroke="#0A1130" stroke-width="2"/>
+          <text class="ll-mono" x="148" y="222" font-size="10" fill="#F59E0B" text-anchor="end">02 DEVELOP</text>
+        </g>
+        <text class="ll-mono hp-fade d4" x="392" y="52" font-size="10" fill="#F2762E" text-anchor="end">03 DELIVER</text>
+      </svg>
+    </div>
+
+    <div class="hero-foot">
+      <div class="hero-foot-item fi-diagnose">
+        <div class="eyebrow">Enterprise gaps</div>
+        <p>Diagnose every MSME through automated assessments, benchmarked by sector and size.</p>
+      </div>
+      <div class="hero-foot-item fi-develop">
+        <div class="eyebrow">Sector-aligned grounding</div>
+        <p>Develop cohort and cluster programmes, closing diagnosed gaps to sector standard, at scale.</p>
+      </div>
+      <div class="hero-foot-item fi-deliver">
+        <div class="eyebrow">Sustainable growth</div>
+        <p>Deliver bespoke support through a vetted consultant network, propelling MSMEs beyond sector standard.</p>
+      </div>
+    </div>
+
+    <div class="hero-security-strip">
+      <svg class="trust-icon" width="22" height="25" viewBox="0 0 14 16" fill="none"><path d="M7 1L1 3.5V7.5C1 11 3.5 13.7 7 15C10.5 13.7 13 11 13 7.5V3.5L7 1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+      <div>
+        <div class="hss-title">Your data is safe with us</div>
+        <div class="hss-sub">Every diagnostic result and business record is encrypted, kept confidential, and handled in line with DPDP — never sold or shared without your consent.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHODOLOGY ============ -->
+<section id="approach">
+  <div class="wrap">
+    <div class="section-head" style="max-width:800px;">
+      <div class="section-tagline">Three Leaps. One Rise.</div>
+      <h2>The <span class="three-d-badge">3D</span> MSME Transformation Platform</h2>
+      <p>India's first platform-led approach to MSME transformation — from diagnosed gap to durable growth, at ecosystem scale.</p>
+
+      <div class="stage-rail">
+        <div class="pt"><span class="dot"></span><span class="lbl">DIAGNOSE</span></div>
+        <div class="connector"></div>
+        <div class="pt"><span class="dot"></span><span class="lbl">DEVELOP</span></div>
+        <div class="connector"></div>
+        <div class="pt"><span class="dot"></span><span class="lbl">DELIVER</span></div>
+      </div>
+    </div>
+
+    <div class="verticals" id="verticals">
+      <div class="v-card">
+        <span class="stage-tag">STAGE 1D</span>
+        <div class="v-head">
+          <svg class="v-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="18" stroke="#D97706" stroke-width="1.5" opacity="0.3"/>
+          <circle cx="24" cy="24" r="12" stroke="#D97706" stroke-width="1.8"/>
+          <circle cx="24" cy="24" r="3.2" fill="#D97706"/>
+          <line x1="24" y1="3" x2="24" y2="9" stroke="#D97706" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="24" y1="39" x2="24" y2="45" stroke="#D97706" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="3" y1="24" x2="9" y2="24" stroke="#D97706" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="39" y1="24" x2="45" y2="24" stroke="#D97706" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+          <h3>Diagnose</h3>
+        </div>
+        <div class="v-card-bg">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="18" stroke="#D97706" stroke-width="1" opacity="0.5"/>
+            <circle cx="24" cy="24" r="12" stroke="#D97706" stroke-width="1.2"/>
+            <circle cx="24" cy="24" r="3.2" fill="#D97706"/>
+            <line x1="24" y1="3" x2="24" y2="9" stroke="#D97706" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="24" y1="39" x2="24" y2="45" stroke="#D97706" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="3" y1="24" x2="9" y2="24" stroke="#D97706" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="39" y1="24" x2="45" y2="24" stroke="#D97706" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <p class="desc-problem">Business assessment meant affording a consultant. Not anymore.</p>
+        <p class="desc-solution">Our automated 360° diagnostics benchmark your business health against real sector data, at a fraction of the cost — your trusted forums/institutes get assessment at scale, to feed schemes &amp; offerings. <a class="eng-cta-explore" href="#diagnose" onclick="goTo('diagnose'); return false;">Explore →</a></p>
+        <div class="outcome-badge">
+          <span class="oa">Outcome</span>
+          <span class="ov">Enterprise Gaps</span>
+        </div>
+      </div>
+
+      <div class="v-card">
+        <span class="stage-tag">STAGE 2D</span>
+        <div class="v-head">
+          <svg class="v-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="24" y1="24" x2="40" y2="24" stroke="#F59E0B" stroke-width="1.6"/>
+          <line x1="24" y1="24" x2="32" y2="10.1" stroke="#F59E0B" stroke-width="1.6"/>
+          <line x1="24" y1="24" x2="16" y2="10.1" stroke="#F59E0B" stroke-width="1.6"/>
+          <line x1="24" y1="24" x2="8" y2="24" stroke="#F59E0B" stroke-width="1.6"/>
+          <line x1="24" y1="24" x2="16" y2="37.9" stroke="#F59E0B" stroke-width="1.6"/>
+          <line x1="24" y1="24" x2="32" y2="37.9" stroke="#F59E0B" stroke-width="1.6"/>
+          <circle cx="24" cy="24" r="4.5" fill="#F59E0B"/>
+          <circle cx="40" cy="24" r="2.8" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1.6"/>
+          <circle cx="32" cy="10.1" r="2.8" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1.6"/>
+          <circle cx="16" cy="10.1" r="2.8" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1.6"/>
+          <circle cx="8" cy="24" r="2.8" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1.6"/>
+          <circle cx="16" cy="37.9" r="2.8" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1.6"/>
+          <circle cx="32" cy="37.9" r="2.8" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1.6"/>
+        </svg>
+          <h3>Develop</h3>
+        </div>
+        <div class="v-card-bg">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="24" y1="24" x2="40" y2="24" stroke="#F59E0B" stroke-width="1"/>
+            <line x1="24" y1="24" x2="32" y2="10.1" stroke="#F59E0B" stroke-width="1"/>
+            <line x1="24" y1="24" x2="16" y2="10.1" stroke="#F59E0B" stroke-width="1"/>
+            <line x1="24" y1="24" x2="8" y2="24" stroke="#F59E0B" stroke-width="1"/>
+            <line x1="24" y1="24" x2="16" y2="37.9" stroke="#F59E0B" stroke-width="1"/>
+            <line x1="24" y1="24" x2="32" y2="37.9" stroke="#F59E0B" stroke-width="1"/>
+            <circle cx="24" cy="24" r="4.5" fill="#F59E0B"/>
+            <circle cx="40" cy="24" r="2.8" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1"/>
+            <circle cx="32" cy="10.1" r="2.8" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1"/>
+            <circle cx="16" cy="10.1" r="2.8" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1"/>
+            <circle cx="8" cy="24" r="2.8" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1"/>
+            <circle cx="16" cy="37.9" r="2.8" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1"/>
+            <circle cx="32" cy="37.9" r="2.8" fill="#FFFFFF" stroke="#F59E0B" stroke-width="1"/>
+          </svg>
+        </div>
+
+        <p class="desc-problem">No MSME closes a sector-wide gap alone. None should have to.</p>
+        <p class="desc-solution">We develop cluster and cohort programmes — enrollment guided by diagnosis, curriculum co-built with your forums/institutes — plus management tools that outlast the programme. One group, one sector standard. <a class="eng-cta-explore" href="#develop" onclick="goTo('develop'); return false;">Explore →</a></p>
+        <div class="outcome-badge">
+          <span class="oa">Outcome</span>
+          <span class="ov">Sector-Aligned Grounding</span>
+        </div>
+      </div>
+
+      <div class="v-card">
+        <span class="stage-tag">STAGE 3D</span>
+        <div class="v-head">
+          <svg class="v-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="30" width="6" height="12" rx="1" fill="#B45309" opacity="0.85"/>
+          <rect x="21" y="24" width="6" height="18" rx="1" fill="#B45309" opacity="0.85"/>
+          <rect x="34" y="16" width="6" height="26" rx="1" fill="#B45309" opacity="0.85"/>
+          <path d="M6 30 L16 20 L26 24 L36.7 11.8" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <polygon points="40,8 38.8,13.6 34.6,9.9" fill="#B45309"/>
+        </svg>
+          <h3>Deliver</h3>
+        </div>
+        <div class="v-card-bg">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="30" width="6" height="12" rx="1" fill="#B45309" opacity="0.85"/>
+            <rect x="21" y="24" width="6" height="18" rx="1" fill="#B45309" opacity="0.85"/>
+            <rect x="34" y="16" width="6" height="26" rx="1" fill="#B45309" opacity="0.85"/>
+            <path d="M6 30 L16 20 L26 24 L36.7 11.8" stroke="#B45309" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <polygon points="40,8 38.8,13.6 34.6,9.9" fill="#B45309"/>
+          </svg>
+        </div>
+
+        <p class="desc-problem">Growing beyond sector standard meant chasing rare expertise. Never again.</p>
+        <p class="desc-solution">Diagnosis-led, we match you to vetted consultants — by expertise, by sector fit — to deliver bespoke growth support. Consultants get qualified leads, tools to work at scale, serving you faster and cheaper. A sustainable win for both. <a class="eng-cta-explore" href="#deliver" onclick="goTo('deliver'); return false;">Explore →</a></p>
+        <div class="outcome-badge">
+          <span class="oa">Outcome</span>
+          <span class="ov">Sustainable Growth</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENGAGEMENT MODELS + CONTACT ============ -->
+<section class="partner-cta">
+  <div class="wrap">
+    <div class="eyebrow">Engagement models</div>
+    <h2>MSMEs. Those who reach them. Those who serve them. <span class="ecosystem-accent">One Platform.</span></h2>
+
+    <div class="engagement-cards">
+      <div class="eng-card">
+        <span class="eng-label">Self-serve</span>
+        <h3>For MSMEs</h3>
+        <p>Diagnose your business health directly, or through your forum — then get matched to the right cohort or consultant. <a class="eng-cta-explore" href="#diagnose" onclick="goTo('diagnose'); return false;">Explore →</a></p>
+        <a class="eng-cta" href="#" onclick="openAuthModal('register'); selectAuthRole('msme'); return false;">Start your assessment →</a>
+      </div>
+
+      <div class="eng-card">
+        <span class="eng-label">Channel Partner</span>
+        <h3>For Forums &amp; Institutes</h3>
+        <p>Connect your existing MSME relationships to our diagnostic and cohort infrastructure — you keep the relationship, we power the assessment and delivery behind it. <a class="eng-cta-explore" href="#develop" onclick="goTo('develop'); return false;">Explore →</a></p>
+        <a class="eng-cta" href="#" onclick="openAuthModal('register'); selectAuthRole('forum'); return false;">Partner with us →</a>
+      </div>
+
+      <div class="eng-card">
+        <span class="eng-label">Network Partner</span>
+        <h3>For Consultants</h3>
+        <p>Join our vetted network and receive matched MSME engagements on an ongoing basis, backed by the tools to run them at scale. <a class="eng-cta-explore" href="#deliver" onclick="goTo('deliver'); return false;">Explore →</a></p>
+        <a class="eng-cta" href="#" onclick="openAuthModal('register'); selectAuthRole('consultant'); return false;">Join our network →</a>
+      </div>
+    </div>
+
+
+    <div class="contact-details" id="contact">
+      <div class="cd-item">
+        <span class="cd-label">Email</span>
+        <a href="mailto:connect@launchpadleaders.in">connect@launchpadleaders.in</a>
+      </div>
+      <div class="cd-item">
+        <span class="cd-label">Address</span>
+        <span>Launchpad Leaders Private Limited<br>No.343, Reddy Complex, BGS Hospital Road, Global Village Back Gate, Mylasandra, Kengeri Hobli, Bangalore, Karnataka - 560059, India</span>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="page-section" id="page-diagnose">
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="wrap page-hero-inner">
+    <div class="eyebrow">Diagnose · Enterprise Gaps</div>
+    <h1>Business assessment has always been a privilege. Not anymore.</h1>
+    <p>Comprehensive automated diagnostic tools — covering compliance, security, scheme eligibility, and digital/export readiness — at a fraction of the cost of engaging a consultant.</p>
+    <div class="stat-row">
+      <div class="stat"><b>360°</b><span>Diagnostics</span></div>
+      <div class="stat"><b>~15 min</b><span>Avg. assessment time</span></div>
+      <div class="stat"><b>35+</b><span>Govt. schemes matched</span></div>
+    </div>
+
+    <div class="pricing-note">
+      <div class="pn-item"><span class="dot free"></span> Free tools — quick registration, no card needed</div>
+      <div class="pn-item"><span class="dot paid"></span> Licensed tools — priced per report or monthly</div>
+    </div>
+
+    <figure class="ll-figure page-hero-art">
+      <svg class="ll-art" viewBox="0 0 340 274" xmlns="http://www.w3.org/2000/svg"
+           role="img" aria-labelledby="gaugeTitle gaugeDesc">
+        <title id="gaugeTitle">Business maturity dial</title>
+        <desc id="gaugeDesc">A five-band maturity dial reading 74 out of 100, with a reference mark
+        showing sector standard at 58.</desc>
+
+        <!-- maturity bands, drawn left to right over the top -->
+        <path d="M46.03 173.40 A124 124 0 0 1 68.15 105.25"   fill="none" stroke="#FDE9C8" stroke-width="18"/>
+        <path d="M71.28 100.95 A124 124 0 0 1 129.17 58.91"   fill="none" stroke="#FBD48A" stroke-width="18"/>
+        <path d="M134.21 57.29 A124 124 0 0 1 205.79 57.29"   fill="none" stroke="#F5A93C" stroke-width="18"/>
+        <path d="M210.83 58.91 A124 124 0 0 1 268.72 100.95"  fill="none" stroke="#F2762E" stroke-width="18"/>
+        <path d="M271.85 105.25 A124 124 0 0 1 293.97 173.40" fill="none" stroke="#B45309" stroke-width="18"/>
+
+        <!-- sector-standard reference mark at 58 -->
+        <line x1="170" y1="42" x2="170" y2="62" stroke="#0F1A42" stroke-width="2.6"
+              transform="rotate(14.4 170 176)"/>
+
+        <!-- reading -->
+        <g class="ll-needle" transform="rotate(43.2 170 176)">
+          <path d="M165.5 176 L170 64 L174.5 176 Z" fill="#0A1130"/>
+        </g>
+        <circle cx="170" cy="176" r="11" fill="#0A1130"/>
+        <circle cx="170" cy="176" r="4.4" fill="#F2762E"/>
+
+        <text x="170" y="224" font-size="40" font-family="Fraunces,Georgia,serif" font-weight="700"
+              fill="#151A33" text-anchor="middle">74</text>
+        <text class="ll-mono" x="170" y="242" font-size="8.5" fill="#5B6280" text-anchor="middle">MATURITY SCORE</text>
+
+        <g class="ll-mono" font-size="8" fill="#5B6280">
+          <text x="10"  y="196" text-anchor="start">NASCENT</text>
+          <text x="79"  y="51"  text-anchor="middle">EMERGING</text>
+          <text x="170" y="22"  text-anchor="middle">ESTABLISHED</text>
+          <text x="261" y="51"  text-anchor="middle">ADVANCED</text>
+          <text x="330" y="196" text-anchor="end">LEADING</text>
+        </g>
+        <g class="ll-mono" font-size="8" fill="#5B6280">
+          <line x1="88" y1="256" x2="88" y2="266" stroke="#0F1A42" stroke-width="2.4"/>
+          <text x="98" y="265">SECTOR STANDARD &#183; 58</text>
+        </g>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ FLAGSHIP TOOL ============ -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="flagship">
+      <div class="f-left">
+        <span class="fl-badge">★ Flagship · Licensed</span>
+        <div class="eyebrow">Start here</div>
+        <h2>360° Business Assessment</h2>
+        <p>One comprehensive, automated health assessment across every dimension — Market Positioning, Business Model, Scheme Leverage, Digital Maturity, Operational Excellence, Scale Readiness — benchmarked against your sector and size. Your results tell you exactly which tools, cohorts, or consultants to turn to next.</p>
+        <div class="fl-fine">₹2,999–7,999 per report, based on business complexity — takes about 15 minutes. Quick registration (name, business, phone/email) required to generate and save your report.</div>
+        <div class="trust-badge" style="margin-top:16px; max-width:480px;">
+          <svg class="trust-icon" width="15" height="17" viewBox="0 0 14 16" fill="none"><path d="M7 1L1 3.5V7.5C1 11 3.5 13.7 7 15C10.5 13.7 13 11 13 7.5V3.5L7 1Z" stroke="#14532D" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          <span>Your financials and diagnostic results are encrypted, kept confidential, and never sold or shared without your consent.</span>
+        </div>
+      </div>
+      <figure class="ll-figure fl-art" aria-hidden="false">
+        <svg class="ll-art" viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg"
+             role="img" aria-labelledby="radarTitle radarDesc">
+          <title id="radarTitle">Six-dimension assessment profile</title>
+          <desc id="radarDesc">A radar chart plotting a business against sector standard across six
+          dimensions. The business leads on business model and market positioning, and trails sector
+          standard on operations and scheme leverage.</desc>
+          <g transform="translate(170,140)">
+            <g fill="none" stroke="#EDEFF7" opacity=".16" stroke-width="1">
+              <polygon points="0,-25 21.7,-12.5 21.7,12.5 0,25 -21.7,12.5 -21.7,-12.5"/>
+              <polygon points="0,-50 43.3,-25 43.3,25 0,50 -43.3,25 -43.3,-25"/>
+              <polygon points="0,-75 65,-37.5 65,37.5 0,75 -65,37.5 -65,-37.5"/>
+              <polygon points="0,-100 86.6,-50 86.6,50 0,100 -86.6,50 -86.6,-50"/>
+            </g>
+            <g stroke="#EDEFF7" opacity=".16" stroke-width="1">
+              <line x1="0" y1="0" x2="0" y2="-100"/><line x1="0" y1="0" x2="86.6" y2="-50"/>
+              <line x1="0" y1="0" x2="86.6" y2="50"/><line x1="0" y1="0" x2="0" y2="100"/>
+              <line x1="0" y1="0" x2="-86.6" y2="50"/><line x1="0" y1="0" x2="-86.6" y2="-50"/>
+            </g>
+            <polygon points="0,-65 56.3,-32.5 56.3,32.5 0,65 -56.3,32.5 -56.3,-32.5"
+                     fill="none" stroke="#9FD8E0" stroke-width="1.5" stroke-dasharray="5 4" opacity=".75"/>
+            <polygon class="ll-radar-you" points="0,-42 73.6,-42.5 43.3,25 0,84 -47.6,27.5 -34.6,-20"
+                     fill="#F2762E" fill-opacity=".22" stroke="#F2762E" stroke-width="2.2" stroke-linejoin="round"/>
+          </g>
+          <g class="ll-mono" font-size="7.5" fill="#B7BEDE" text-anchor="middle">
+            <text x="170" y="26">MARKET POSITIONING</text>
+            <text x="284" y="88">BUSINESS MODEL</text>
+            <text x="282" y="204">SCHEME LEVERAGE</text>
+            <text x="170" y="262">DIGITAL MATURITY</text>
+            <text x="58" y="204">OPERATIONS</text>
+            <text x="60" y="88">FINANCIAL HEALTH</text>
+          </g>
+          <g class="ll-mono" font-size="7.5" fill="#B7BEDE">
+            <rect x="52" y="284" width="16" height="8" rx="2" fill="#F2762E" fill-opacity=".3" stroke="#F2762E"/>
+            <text x="74" y="291">YOUR BUSINESS</text>
+            <line x1="180" y1="288" x2="196" y2="288" stroke="#9FD8E0" stroke-width="1.6" stroke-dasharray="4 3"/>
+            <text x="202" y="291">SECTOR STANDARD</text>
+          </g>
+        </svg>
+        <figcaption class="ll-figcaption">Sample profile &#183; not your data</figcaption>
+      </figure>
+      <div class="f-right">
+        <a class="btn btn-primary" href="#" onclick="return requireAuthPlaceholder();">Start assessment →</a>
+        <a class="sample-link" href="#" onclick="return viewSamplePlaceholder();">See a sample report →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOL GROUPS ============ -->
+<section style="padding-top:0;">
+  <div class="wrap">
+
+    <div class="group">
+      <div class="group-head"><span class="group-icon" style="background:var(--blue-600);"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round"/></svg></span><h3>Compliance &amp; Risk</h3><span class="count">3 tools</span></div>
+      <div class="tool-grid">
+
+        <details class="tool-card">
+          <summary>
+            <div class="tc-head"><h4>DPDP Compliance Readiness</h4><span class="price-badge paid">From ₹1,999</span><svg class="tc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="tc-desc">Data-protection gap analysis ahead of the May 2027 deadline.</p>
+          </summary>
+          <div class="tc-expand">
+            <span class="hiw-label">How it works</span>
+            <ol><li>Answer a data-inventory questionnaire</li><li>We flag every consent/compliance gap</li><li>Get a remediation checklist before May 2027</li></ol>
+            <div class="tc-pricing-line">Licensed — <b>₹1,999–5,999 per report</b>. One-time fee.</div>
+            <div class="tc-ctas"><a class="btn-sm-primary" href="dpdp-compliance-readiness.html" onclick="return requireAuthThenGo('dpdp-compliance-readiness.html');">Explore tool →</a><a class="btn-sm-ghost" href="#" onclick="return viewSamplePlaceholder();">View sample report</a></div>
+          </div>
+        </details>
+
+        <details class="tool-card">
+          <summary>
+            <div class="tc-head"><h4>Cybersecurity Readiness</h4><span class="price-badge paid">From ₹199/mo</span><svg class="tc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="tc-desc">A security self-assessment with a clear, prioritised action checklist.</p>
+          </summary>
+          <div class="tc-expand">
+            <span class="hiw-label">How it works</span>
+            <ol><li>Take a short security self-assessment</li><li>Get a prioritised vulnerability checklist</li><li>Track your readiness score over time</li></ol>
+            <div class="tc-pricing-line">Licensed — <b>₹199–799/month</b>, billed monthly.</div>
+            <div class="tc-ctas"><a class="btn-sm-primary" href="#" onclick="return requireAuthPlaceholder();">Explore tool</a><a class="btn-sm-ghost" href="#" onclick="return viewSamplePlaceholder();">View sample report</a></div>
+          </div>
+        </details>
+
+        <details class="tool-card">
+          <summary>
+            <div class="tc-head"><h4>ESG / Carbon-Tracking</h4><span class="price-badge paid">From ₹999/mo</span><svg class="tc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="tc-desc">Carbon-footprint tracking and CBAM-readiness for export MSMEs.</p>
+          </summary>
+          <div class="tc-expand">
+            <span class="hiw-label">How it works</span>
+            <ol><li>Log energy, fuel, and production data</li><li>We calculate your carbon footprint automatically</li><li>Get a CBAM-ready export report</li></ol>
+            <div class="tc-pricing-line">Licensed — <b>₹999–4,999/month</b>, billed monthly.</div>
+            <div class="tc-ctas"><a class="btn-sm-primary" href="#" onclick="return requireAuthPlaceholder();">Explore tool</a><a class="btn-sm-ghost" href="#" onclick="return viewSamplePlaceholder();">View sample report</a></div>
+          </div>
+        </details>
+
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-icon" style="background:#B45309;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 3h7l4 4v14a1 1 0 01-1 1H7a1 1 0 01-1-1V4a1 1 0 011-1z" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12h6M9 16h6M9 8h2" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Scheme &amp; Eligibility</h3><span class="count">4 tools</span></div>
+      <div class="tool-grid">
+
+        <details class="tool-card">
+          <summary>
+            <div class="tc-head"><h4>Scheme Eligibility &amp; Matching Engine</h4><span class="price-badge paid">From ₹299</span><svg class="tc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="tc-desc">One questionnaire. Ranked results across 35+ central and state schemes.</p>
+          </summary>
+          <div class="tc-expand">
+            <span class="hiw-label">How it works</span>
+            <ol><li>Answer a short guided questionnaire</li><li>We score you against 35+ schemes instantly</li><li>Get a ranked list and a document checklist</li></ol>
+            <div class="tc-pricing-line">Free basic match — <b>₹299–999 per full report</b> with document checklist.</div>
+            <div class="tc-ctas"><a class="btn-sm-primary" href="#" onclick="return requireAuthPlaceholder();">Explore tool</a><a class="btn-sm-ghost" href="#" onclick="return viewSamplePlaceholder();">View sample report</a></div>
+          </div>
+        </details>
+
+        <details class="tool-card">
+          <summary>
+            <div class="tc-head"><h4>Scheme-Change Alert Service</h4><span class="price-badge free">Free</span><svg class="tc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="tc-desc">Never miss a new scheme or a revised subsidy cap again.</p>
+          </summary>
+          <div class="tc-expand">
+            <span class="hiw-label">How it works</span>
+            <ol><li>Comes free with your scheme match</li><li>We monitor every scheme you're eligible for</li><li>Get notified the moment something changes</li></ol>
+            <div class="tc-pricing-line">Free — bundled automatically with the Matching Engine. Registration required.</div>
+            <div class="tc-ctas"><a class="btn-sm-primary" href="#" onclick="return requireAuthPlaceholder();">Explore tool</a><a class="btn-sm-ghost" href="#" onclick="return viewSamplePlaceholder();">View sample report</a></div>
+          </div>
+        </details>
+
+        <details class="tool-card">
+          <summary>
+            <div class="tc-head"><h4>Voice / WhatsApp Scheme Navigator</h4><span class="price-badge free">Free</span><svg class="tc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="tc-desc">Ask in your language. Get scheme guidance over WhatsApp.</p>
+          </summary>
+          <div class="tc-expand">
+            <span class="hiw-label">How it works</span>
+            <ol><li>Message us in your language</li><li>Ask anything about schemes or documents</li><li>Get answers, or a human handoff, on WhatsApp</li></ol>
+            <div class="tc-pricing-line">Free — registration required to save your conversation history.</div>
+            <div class="tc-ctas"><a class="btn-sm-primary" href="#" onclick="return requireAuthPlaceholder();">Explore tool</a><a class="btn-sm-ghost" href="#" onclick="return viewSamplePlaceholder();">View sample report</a></div>
+          </div>
+        </details>
+
+        <details class="tool-card">
+          <summary>
+            <div class="tc-head"><h4>Scheme-Outcome Benchmarking</h4><span class="price-badge paid">From ₹199/mo</span><svg class="tc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="tc-desc">See what similar businesses achieved on the same scheme.</p>
+          </summary>
+          <div class="tc-expand">
+            <span class="hiw-label">How it works</span>
+            <ol><li>Pick any scheme you're considering</li><li>See what similar businesses actually achieved</li><li>Decide with real outcome data, not guesswork</li></ol>
+            <div class="tc-pricing-line">Licensed — <b>₹199–499/month</b>, billed monthly.</div>
+            <div class="tc-ctas"><a class="btn-sm-primary" href="scheme-outcome-benchmarking.html" onclick="return requireAuthThenGo('scheme-outcome-benchmarking.html');">Explore tool →</a><a class="btn-sm-ghost" href="#" onclick="return viewSamplePlaceholder();">View sample report</a></div>
+          </div>
+        </details>
+
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="group-head"><span class="group-icon" style="background:#B45309;"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#FFFFFF" stroke-width="1.8"/><path d="M3 12h18M12 3c2.5 2.5 3.8 6 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-6-3.8-9S9.5 5.5 12 3z" stroke="#FFFFFF" stroke-width="1.8"/></svg></span><h3>Digital &amp; Export Readiness</h3><span class="count">3 tools</span></div>
+      <div class="tool-grid">
+
+        <details class="tool-card">
+          <summary>
+            <div class="tc-head"><h4>ERP-Lite / Digital Systems Bundle</h4><span class="price-badge free">Free</span><svg class="tc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="tc-desc">Basic inventory, CRM, and e-invoicing — no separate software needed.</p>
+          </summary>
+          <div class="tc-expand">
+            <span class="hiw-label">How it works</span>
+            <ol><li>Set up inventory, CRM, and invoicing in minutes</li><li>Everything syncs to one dashboard</li><li>Free — upgrade only if you outgrow it</li></ol>
+            <div class="tc-pricing-line">Free — registration required. No card needed.</div>
+            <div class="tc-ctas"><a class="btn-sm-primary" href="#" onclick="return requireAuthPlaceholder();">Explore tool</a><a class="btn-sm-ghost" href="#" onclick="return viewSamplePlaceholder();">View sample report</a></div>
+          </div>
+        </details>
+
+        <details class="tool-card">
+          <summary>
+            <div class="tc-head"><h4>Document Vault &amp; KYC Auto-fill</h4><span class="price-badge paid">From ₹99/mo</span><svg class="tc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="tc-desc">Upload once. Reuse across every scheme application, automatically.</p>
+          </summary>
+          <div class="tc-expand">
+            <span class="hiw-label">How it works</span>
+            <ol><li>Upload your documents once</li><li>They auto-fill every future scheme application</li><li>Get renewal reminders before anything expires</li></ol>
+            <div class="tc-pricing-line">Licensed — <b>₹99–299/month</b>, billed monthly.</div>
+            <div class="tc-ctas"><a class="btn-sm-primary" href="document-vault-kyc.html" onclick="return requireAuthThenGo('document-vault-kyc.html');">Explore tool →</a><a class="btn-sm-ghost" href="#" onclick="return viewSamplePlaceholder();">View sample report</a></div>
+          </div>
+        </details>
+
+        <details class="tool-card">
+          <summary>
+            <div class="tc-head"><h4>Export Readiness &amp; Documentation</h4><span class="price-badge paid">From ₹999</span><svg class="tc-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="tc-desc">Destination-specific export checklists, HS codes, and labeling guidance.</p>
+          </summary>
+          <div class="tc-expand">
+            <span class="hiw-label">How it works</span>
+            <ol><li>Tell us your product and destination market</li><li>Get a destination-specific document checklist</li><li>HS codes and labeling guidance included</li></ol>
+            <div class="tc-pricing-line">Licensed — <b>₹999–2,499 per report</b>. One-time fee.</div>
+            <div class="tc-ctas"><a class="btn-sm-primary" href="#" onclick="return requireAuthPlaceholder();">Explore tool</a><a class="btn-sm-ghost" href="#" onclick="return viewSamplePlaceholder();">View sample report</a></div>
+          </div>
+        </details>
+
+      </div>
+    </div>
+
+    <div class="bridge">
+      <p><b>Your results feed straight into Develop and Deliver</b> — matched to the right cohort, cluster, or consultant based on exactly what your diagnosis finds.</p>
+      <div class="arrows">
+        <a href="#develop" onclick="goTo('develop'); return false;">See Develop →</a>
+        <a href="#deliver" onclick="goTo('deliver'); return false;">See Deliver →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<div class="page-section" id="page-develop">
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="wrap page-hero-inner">
+    <div class="eyebrow">Develop · Sector-Aligned Grounding</div>
+    <h1>No MSME closes a sector-wide gap alone.</h1>
+    <p>COEs, clusters and cohort programmes, co-developed with MSME forums and industry groups — plus the ongoing tools that keep a group performing long after the programme ends.</p>
+
+    <figure class="ll-figure page-hero-art">
+      <svg class="ll-art" viewBox="0 0 440 258" xmlns="http://www.w3.org/2000/svg"
+           role="img" aria-labelledby="clusterTitle clusterDesc">
+        <title id="clusterTitle">A cohort lifted to sector standard together</title>
+        <desc id="clusterDesc">Businesses grouped into one cohort are carried above the sector-standard
+        line together, while businesses working alone remain scattered well below it.</desc>
+        <line x1="20" y1="86" x2="420" y2="86" stroke="#0F1A42" stroke-width="1.5" stroke-dasharray="6 5" opacity=".5"/>
+        <text class="ll-mono" x="20" y="76" font-size="9" fill="#5B6280">SECTOR STANDARD</text>
+        <rect x="104" y="100" width="184" height="116" rx="18" fill="#F2762E" fill-opacity=".05"
+              stroke="#F2762E" stroke-width="1.4" stroke-dasharray="6 5" opacity=".75"/>
+        <text class="ll-mono" x="196" y="236" font-size="9" fill="#F2762E" text-anchor="middle">ONE COHORT &#183; ONE STANDARD</text>
+        <g fill="#F2762E">
+          <circle class="ll-lift"   cx="132" cy="56" r="7"/>
+          <circle class="ll-lift b" cx="178" cy="44" r="7"/>
+          <circle class="ll-lift c" cx="224" cy="52" r="7"/>
+          <circle class="ll-lift d" cx="266" cy="40" r="7"/>
+        </g>
+        <g stroke="#F2762E" stroke-width="1.4" opacity=".5" fill="none" stroke-linecap="round">
+          <path d="M132 126 L132 72"/><path d="M178 138 L178 60"/>
+          <path d="M224 130 L224 68"/><path d="M266 144 L266 56"/>
+          <path d="M128 78 L132 70 L136 78"/><path d="M174 66 L178 58 L182 66"/>
+          <path d="M220 74 L224 66 L228 74"/><path d="M262 62 L266 54 L270 62"/>
+        </g>
+        <g fill="#0F1A42" opacity=".32">
+          <circle cx="132" cy="136" r="6.5"/><circle cx="178" cy="148" r="6.5"/>
+          <circle cx="224" cy="140" r="6.5"/><circle cx="266" cy="154" r="6.5"/>
+          <circle cx="152" cy="184" r="6.5"/><circle cx="200" cy="196" r="6.5"/><circle cx="246" cy="188" r="6.5"/>
+        </g>
+        <g fill="#0F1A42" opacity=".16">
+          <circle cx="46" cy="164" r="6"/><circle cx="66" cy="204" r="6"/>
+          <circle cx="342" cy="176" r="6"/><circle cx="378" cy="208" r="6"/><circle cx="404" cy="150" r="6"/>
+        </g>
+        <text class="ll-mono" x="20" y="240" font-size="8" fill="#5B6280" opacity=".65">ALONE</text>
+        <text class="ll-mono" x="420" y="240" font-size="8" fill="#5B6280" opacity=".65" text-anchor="end">ALONE</text>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ VALUE PILLARS (public, both audiences) ============ -->
+<section style="padding-top:0;" id="devPillarsSection" aria-labelledby="devPillarsHeading">
+  <div class="wrap">
+    <h2 id="devPillarsHeading" class="sr-only">Why the cohort model works</h2>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon-tile">
+          <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="18" r="6" stroke="#B45309" stroke-width="2"/>
+          <circle cx="32" cy="18" r="6" stroke="#B45309" stroke-width="2"/>
+          <path d="M6 40c0-6 4.5-10 10-10s10 4 10 10M22 40c0-6 4.5-10 10-10s10 4 10 10" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        </div>
+        <h3>Shared programmes, shared cost</h3>
+        <p>Cluster and cohort programmes move whole groups of similar MSMEs to sector standard together — not one business at a time.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon-tile">
+          <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="26" width="12" height="15" rx="2.5" stroke="#B45309" stroke-width="2"/>
+          <line x1="24" y1="27" x2="24" y2="7" stroke="#B45309" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="24" y1="27" x2="31" y2="9" stroke="#B45309" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="24" y1="27" x2="17" y2="9" stroke="#B45309" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="24" y1="27" x2="36" y2="14" stroke="#B45309" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="24" y1="27" x2="12" y2="14" stroke="#B45309" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="20.5" y1="33" x2="27.5" y2="33" stroke="#B45309" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        </div>
+        <h3>Tools that outlast the programme</h3>
+        <p>Shared-facility monitoring, pooled procurement, and market access that keep working long after a cohort ends.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon-tile">
+          <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 40V26M18 40V16M28 40V22M38 40V10" stroke="#B45309" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M6 20l10-8 8 6 12-12" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </div>
+        <h3>Real outcomes, benchmarked</h3>
+        <p>Live cluster dashboards and peer performance tracking — measurable progress, not just attendance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUDIENCE CARDS (bottom) ============ -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="pillars-head" id="devAudienceHead">
+      <div class="eyebrow" style="justify-content:center; display:flex;">Get started</div>
+      <h2>What you unlock, once you join us</h2>
+    </div>
+
+    <div class="audience-grid" id="devAudienceGrid">
+
+      <!-- MSME AUDIENCE CARD -->
+      <div class="audience-card" id="devMsmeCard">
+        <span class="aud-label" id="msmeAudLabel">For MSMEs</span>
+        <div id="msmePitch">
+          <p class="aud-intro">Get matched to the right COE, cluster, or cohort — reach sector standard together.</p>
+          <ul class="aud-benefits">
+            <li>Browse and enrol in live cohort &amp; cluster programmes</li>
+            <li>Track every programme you're currently part of, in one place</li>
+            <li>See your performance benchmarked against cluster and cohort peers</li>
+            <li>Book shared cluster resources once you're enrolled</li>
+          </ul>
+
+          <div class="scroll-teaser">
+            <button class="scroll-nav scroll-nav-prev" onclick="scrollTeaser(this, -1); return false;" aria-label="Previous">&#8249;</button>
+            <button class="scroll-nav scroll-nav-next" onclick="scrollTeaser(this, 1); return false;" aria-label="Next">&#8250;</button>
+            <div class="scroll-track">
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('msme');"><span class="status enrolling">Enrolling</span><h5>Textile Cluster Growth Cohort</h5><span class="mini-meta">Tiruppur, Tamil Nadu</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('msme');"><span class="status enrolling">Enrolling</span><h5>Food Processing Export Readiness</h5><span class="mini-meta">Pan-India</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('msme');"><span class="status running">Running</span><h5>Handicraft Artisan Cluster</h5><span class="mini-meta">Jaipur, Rajasthan</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('msme');"><span class="status enrolling">Enrolling</span><h5>Textile Cluster Growth Cohort</h5><span class="mini-meta">Tiruppur, Tamil Nadu</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('msme');"><span class="status enrolling">Enrolling</span><h5>Food Processing Export Readiness</h5><span class="mini-meta">Pan-India</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('msme');"><span class="status running">Running</span><h5>Handicraft Artisan Cluster</h5><span class="mini-meta">Jaipur, Rajasthan</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div data-requires-role="msme">
+          <div class="locked-panel" style="display:none; margin-bottom:0;"></div>
+          <div class="gated-content" style="display:none;">
+            <div class="my-programmes">
+              <div class="mp-head"><h3>My enrolled programmes</h3><span class="count">1 active</span></div>
+              <div class="mp-card">
+                <div class="mp-info">
+                  <span class="status running">Running</span>
+                  <h3>Handicraft Artisan Cluster — Jaipur</h3>
+                  <div class="meta">Week 4 of 6 · Rajasthan · Co-delivered with Rajasthan Handicrafts Board</div>
+                </div>
+                <div class="mp-actions">
+                  <a class="btn-sm-ghost" href="cluster-peer-benchmarking.html">See my cluster ranking →</a>
+                  <a class="btn-sm-primary" href="shared-resource-scheduling.html">Book shared resources →</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="aud-divider" style="margin-top:28px;">Browse all live programmes</div>
+
+            <div class="filter-panel">
+              <div class="filter-group">
+                <label for="devFilterSector">Sector</label>
+                <select id="devFilterSector" onchange="applyDevProgFilters()">
+                  <option value="all">All sectors</option>
+                  <option value="textiles">Textiles</option>
+                  <option value="food">Food Processing</option>
+                  <option value="auto">Auto Components</option>
+                  <option value="handicrafts">Handicrafts</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="devFilterState">State</label>
+                <select id="devFilterState" onchange="applyDevProgFilters()">
+                  <option value="all">All states</option>
+                  <option value="tamil-nadu">Tamil Nadu</option>
+                  <option value="maharashtra">Maharashtra</option>
+                  <option value="rajasthan">Rajasthan</option>
+                  <option value="gujarat">Gujarat</option>
+                  <option value="karnataka">Karnataka</option>
+                  <option value="uttar-pradesh">Uttar Pradesh</option>
+                  <option value="west-bengal">West Bengal</option>
+                  <option value="punjab">Punjab</option>
+                  <option value="pan-india">Pan-India</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="prog-grid" id="devProgGrid">
+              <div class="prog-card" data-sector="textiles" data-state="tamil-nadu">
+                <span class="status enrolling">Enrolling</span>
+                <h3>Textile Cluster Growth Cohort — Tiruppur</h3>
+                <div class="meta">12-week programme · Starts 3 Mar · Tamil Nadu</div>
+                <div class="prog-ctas"><span class="cap">34 of 50 seats filled</span><a class="btn-sm-primary" href="#">Enroll →</a></div>
+              </div>
+              <div class="prog-card" data-sector="food" data-state="pan-india">
+                <span class="status enrolling">Enrolling</span>
+                <h3>Food Processing Export Readiness Cohort</h3>
+                <div class="meta">8-week programme · Starts 10 Mar · Pan-India</div>
+                <div class="prog-ctas"><span class="cap">18 of 40 seats filled</span><a class="btn-sm-primary" href="#">Enroll →</a></div>
+              </div>
+              <div class="prog-card" data-sector="auto" data-state="maharashtra">
+                <span class="status upcoming">Upcoming</span>
+                <h3>Auto Components Cluster — Pune</h3>
+                <div class="meta">10-week programme · Starts 5 Apr · Maharashtra</div>
+                <div class="prog-ctas"><span class="cap">Applications open soon</span><a class="btn-sm-ghost" href="#">Notify me</a></div>
+              </div>
+              <div class="prog-card" data-sector="handicrafts" data-state="rajasthan">
+                <span class="status running">Running</span>
+                <h3>Handicraft Artisan Cluster — Jaipur</h3>
+                <div class="meta">6-week programme · Started 12 Feb · Rajasthan</div>
+                <div class="prog-ctas"><span class="cap">Enrollment closed</span><a class="btn-sm-ghost" href="#">Join waitlist</a></div>
+              </div>
+            </div>
+            <div class="empty" id="devProgEmpty" role="status" aria-live="polite" style="display:none;">No live programmes match those filters right now — try widening your search.</div>
+
+            <div class="request-callout" style="margin-top:22px; margin-bottom:0;">
+              <div>
+                <h3>Not sure which fits?</h3>
+                <p>Take our Automated 360° Business Assessment — we'll match you automatically.</p>
+              </div>
+              <a class="btn btn-primary" href="#diagnose" onclick="goTo('diagnose'); return false;">Get diagnosed →</a>
+            </div>
+
+            <div class="request-callout" style="margin-top:20px; margin-bottom:0;">
+              <div>
+                <h3>Don't see the right programme?</h3>
+                <p>Tell us your sector, region, and the gap you want to close — we'll consider it for a new cohort or cluster.</p>
+              </div>
+              <a class="btn btn-primary" href="#contact" onclick="goToContact(); return false;">Request a programme →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORUM / INSTITUTE AUDIENCE CARD -->
+      <div class="audience-card" id="devForumCard">
+        <span class="aud-label" id="forumAudLabel">For Forums &amp; Institutes</span>
+        <div id="forumPitch">
+          <p class="aud-intro">Let's co-develop centres of excellence, clusters, and cohort-based growth programmes.</p>
+          <ul class="aud-benefits">
+            <li>Request and co-develop new COE, cluster or cohort programmes</li>
+            <li>View live cohort enrolment and cluster performance dashboards</li>
+            <li>Access curriculum, mentor network, and policy-advocacy tools</li>
+            <li>Book shared cluster resources for your members</li>
+          </ul>
+
+          <div class="scroll-teaser">
+            <button class="scroll-nav scroll-nav-prev" onclick="scrollTeaser(this, -1); return false;" aria-label="Previous">&#8249;</button>
+            <button class="scroll-nav scroll-nav-next" onclick="scrollTeaser(this, 1); return false;" aria-label="Next">&#8250;</button>
+            <div class="scroll-track">
+              <div class="mini-card" onclick="return requireForumThenContact();"><span class="mini-icon">📋</span><h5>Request a new programme</h5></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('forum');"><span class="mini-icon">📊</span><h5>Cluster performance dashboard</h5></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('forum');"><span class="mini-icon">📅</span><h5>Shared-resource scheduling</h5></div>
+              <div class="mini-card" onclick="return requireForumThenContact();"><span class="mini-icon">📋</span><h5>Request a new programme</h5></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('forum');"><span class="mini-icon">📊</span><h5>Cluster performance dashboard</h5></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('forum');"><span class="mini-icon">📅</span><h5>Shared-resource scheduling</h5></div>
+            </div>
+          </div>
+        </div>
+
+        <div data-requires-role="forum">
+          <div class="locked-panel" style="display:none; margin-bottom:0;"></div>
+          <div class="gated-content" style="display:none;">
+            <div class="mp-head" style="margin-bottom:14px;"><h3>My co-managed programmes</h3><span class="count">3 total</span></div>
+            <table class="forum-table">
+              <thead>
+                <tr><th>Programme</th><th>Status</th><th>Enrollment</th><th>Co-delivered with</th><th></th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>Textile Cluster Growth Cohort — Tiruppur</b></td>
+                  <td><span class="status enrolling">Enrolling</span></td>
+                  <td>34 / 50</td>
+                  <td>Tiruppur Exporters' Association</td>
+                  <td><a class="btn-sm-ghost" href="cluster-performance-dashboard.html">View dashboard</a></td>
+                </tr>
+                <tr>
+                  <td><b>Handicraft Artisan Cluster — Jaipur</b></td>
+                  <td><span class="status running">Running</span></td>
+                  <td>62 / 60</td>
+                  <td>Rajasthan Handicrafts Board</td>
+                  <td><a class="btn-sm-ghost" href="cluster-performance-dashboard.html">View dashboard</a></td>
+                </tr>
+                <tr>
+                  <td><b>Leather Goods Cluster — Kanpur</b></td>
+                  <td><span class="status" style="background:var(--paper-100); color:var(--paper-muted);">Completed</span></td>
+                  <td>48 / 50</td>
+                  <td>UP Leather Industry Forum</td>
+                  <td><a class="btn-sm-ghost" href="cluster-performance-dashboard.html">View outcomes</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="request-callout" style="margin-top:20px; margin-bottom:0;">
+              <div>
+                <h3>Request a new cohort or cluster programme</h3>
+                <p>Bring us your members' need — sector, region, and the gap you want to close. We'll co-design the curriculum and run it with you.</p>
+              </div>
+              <a class="btn btn-primary" href="#contact" onclick="goToContact(); return false;">Request a programme →</a>
+            </div>
+
+            <div class="request-callout" style="margin-top:20px; margin-bottom:0;">
+              <div>
+                <h3>Shared-resource scheduling</h3>
+                <p>Book cluster machinery, testing labs, and warehousing on a live shared calendar — no more informal queuing between members.</p>
+              </div>
+              <a class="btn btn-primary" href="shared-resource-scheduling.html">Open booking tool →</a>
+            </div>
+
+            <div class="aud-divider" style="margin-top:28px;">Browse live programmes to suggest to your members</div>
+
+            <div class="filter-panel">
+              <div class="filter-group">
+                <label for="forumFilterSector">Sector</label>
+                <select id="forumFilterSector" onchange="applyForumProgFilters()">
+                  <option value="all">All sectors</option>
+                  <option value="textiles">Textiles</option>
+                  <option value="food">Food Processing</option>
+                  <option value="auto">Auto Components</option>
+                  <option value="handicrafts">Handicrafts</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="forumFilterState">State</label>
+                <select id="forumFilterState" onchange="applyForumProgFilters()">
+                  <option value="all">All states</option>
+                  <option value="tamil-nadu">Tamil Nadu</option>
+                  <option value="maharashtra">Maharashtra</option>
+                  <option value="rajasthan">Rajasthan</option>
+                  <option value="gujarat">Gujarat</option>
+                  <option value="karnataka">Karnataka</option>
+                  <option value="uttar-pradesh">Uttar Pradesh</option>
+                  <option value="west-bengal">West Bengal</option>
+                  <option value="punjab">Punjab</option>
+                  <option value="pan-india">Pan-India</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="prog-grid" id="forumProgGrid">
+              <div class="prog-card" data-sector="textiles" data-state="tamil-nadu">
+                <span class="status enrolling">Enrolling</span>
+                <h3>Textile Cluster Growth Cohort — Tiruppur</h3>
+                <div class="meta">12-week programme · Starts 3 Mar · Tamil Nadu</div>
+                <div class="prog-ctas"><span class="cap">34 of 50 seats filled</span><a class="btn-sm-primary" href="#">Enroll →</a></div>
+              </div>
+              <div class="prog-card" data-sector="food" data-state="pan-india">
+                <span class="status enrolling">Enrolling</span>
+                <h3>Food Processing Export Readiness Cohort</h3>
+                <div class="meta">8-week programme · Starts 10 Mar · Pan-India</div>
+                <div class="prog-ctas"><span class="cap">18 of 40 seats filled</span><a class="btn-sm-primary" href="#">Enroll →</a></div>
+              </div>
+              <div class="prog-card" data-sector="auto" data-state="maharashtra">
+                <span class="status upcoming">Upcoming</span>
+                <h3>Auto Components Cluster — Pune</h3>
+                <div class="meta">10-week programme · Starts 5 Apr · Maharashtra</div>
+                <div class="prog-ctas"><span class="cap">Applications open soon</span><a class="btn-sm-ghost" href="#">Notify me</a></div>
+              </div>
+              <div class="prog-card" data-sector="handicrafts" data-state="rajasthan">
+                <span class="status running">Running</span>
+                <h3>Handicraft Artisan Cluster — Jaipur</h3>
+                <div class="meta">6-week programme · Started 12 Feb · Rajasthan</div>
+                <div class="prog-ctas"><span class="cap">Enrollment closed</span><a class="btn-sm-ghost" href="#">Join waitlist</a></div>
+              </div>
+            </div>
+            <div class="empty" id="forumProgEmpty" role="status" aria-live="polite" style="display:none;">No live programmes match those filters right now — try widening your search.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="aud-register-cta" id="devRegisterCta">
+      <button type="button" class="btn btn-primary" onclick="openAuthModal('register');">Register</button>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<div class="page-section" id="page-deliver">
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="wrap page-hero-inner">
+    <div class="eyebrow">Deliver · Sustainable Growth</div>
+    <h1>Sector standard is the floor, not the ceiling.</h1>
+    <p>Beyond it, every MSME's path is its own. We match MSMEs to the right consultant, and consultants to a steady pipeline of the right engagements.</p>
+
+    <figure class="ll-figure page-hero-art">
+      <svg class="ll-art" viewBox="0 0 466 250" xmlns="http://www.w3.org/2000/svg"
+           role="img" aria-labelledby="matchTitle matchDesc">
+        <title id="matchTitle">Diagnosis-led consultant matching</title>
+        <desc id="matchDesc">A diagnostic profile feeds a matching engine, which connects the business to
+        the one consultant whose specialisation fits the diagnosed gap rather than to a directory listing.</desc>
+        <rect x="14" y="78" width="112" height="94" rx="12" fill="#FFFFFF" stroke="#151A33" stroke-opacity=".14"/>
+        <text class="ll-mono" x="26" y="98" font-size="8" fill="#5B6280">YOUR DIAGNOSIS</text>
+        <g fill="#F2762E">
+          <rect x="26" y="140" width="11" height="18" rx="2"/>
+          <rect x="43" y="128" width="11" height="30" rx="2"/>
+          <rect x="60" y="146" width="11" height="12" rx="2" opacity=".45"/>
+          <rect x="77" y="118" width="11" height="40" rx="2"/>
+          <rect x="94" y="136" width="11" height="22" rx="2" opacity=".45"/>
+        </g>
+        <path class="ll-signal" d="M126 125 L184 125" stroke="#F2762E" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <g transform="translate(228,125)">
+          <circle r="34" fill="#0A1130"/>
+          <circle r="44" fill="none" stroke="#F2762E" stroke-width="1.2" stroke-dasharray="4 5" opacity=".6"/>
+          <path d="M-11 -3 L-3 6 L12 -10" fill="none" stroke="#F2762E" stroke-width="2.8"
+                stroke-linecap="round" stroke-linejoin="round"/>
+          <text class="ll-mono" x="0" y="21" font-size="7" fill="#9FD8E0" text-anchor="middle">MATCH</text>
+        </g>
+        <g fill="none" stroke-width="1.5">
+          <path d="M272 125 C300 125 302 58 330 58" stroke="#F2762E"/>
+          <path d="M272 125 L330 125" stroke="#151A33" stroke-opacity=".15"/>
+          <path d="M272 125 C300 125 302 192 330 192" stroke="#151A33" stroke-opacity=".15"/>
+        </g>
+        <g>
+          <rect x="330" y="34" width="122" height="48" rx="11" fill="#FFFFFF" stroke="#F2762E" stroke-width="1.8"/>
+          <text class="ll-mono" x="342" y="52" font-size="7.5" fill="#F2762E">MATCHED</text>
+          <text x="342" y="70" font-size="11.5" font-weight="600" fill="#151A33" font-family="IBM Plex Sans,sans-serif">Credit &amp; Lending</text>
+        </g>
+        <g opacity=".4">
+          <rect x="330" y="101" width="122" height="48" rx="11" fill="#FFFFFF" stroke="#151A33" stroke-opacity=".18"/>
+          <text class="ll-mono" x="342" y="119" font-size="7.5" fill="#5B6280">NOT A FIT</text>
+          <text x="342" y="137" font-size="11.5" font-weight="600" fill="#151A33" font-family="IBM Plex Sans,sans-serif">Export Docs</text>
+        </g>
+        <g opacity=".4">
+          <rect x="330" y="168" width="122" height="48" rx="11" fill="#FFFFFF" stroke="#151A33" stroke-opacity=".18"/>
+          <text class="ll-mono" x="342" y="186" font-size="7.5" fill="#5B6280">NOT A FIT</text>
+          <text x="342" y="204" font-size="11.5" font-weight="600" fill="#151A33" font-family="IBM Plex Sans,sans-serif">Lean Ops</text>
+        </g>
+      </svg>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ VALUE PILLARS (public, both audiences) ============ -->
+<section style="padding-top:0;" id="delPillarsSection" aria-labelledby="delPillarsHeading">
+  <div class="wrap">
+    <h2 id="delPillarsHeading" class="sr-only">How consultant matching works</h2>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-icon-tile">
+          <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="16" r="7" stroke="#B45309" stroke-width="2"/>
+          <path d="M10 40c0-8 6-13 14-13s14 5 14 13" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+          <path d="M30 12l5 5-5 5M18 20l-5-5 5-5" stroke="#B45309" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </div>
+        <h3>Matched by expertise, not guesswork</h3>
+        <p>Diagnosis-led matching connects your specific gap to a consultant's specific specialisation — not a directory search.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon-tile">
+          <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 22l8-10h16l8 10-8 18H16l-8-18z" stroke="#B45309" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M18 24l4 4 8-9" stroke="#B45309" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </div>
+        <h3>Vetted both ways</h3>
+        <p>Every consultant is vetted and onboarded before joining. Every engagement is a qualified lead, not a cold pitch.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon-tile">
+          <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="8" width="14" height="14" rx="2" stroke="#B45309" stroke-width="2"/>
+          <rect x="26" y="8" width="14" height="14" rx="2" stroke="#B45309" stroke-width="2"/>
+          <rect x="8" y="26" width="14" height="14" rx="2" stroke="#B45309" stroke-width="2"/>
+          <path d="M33 26v14M26 33h14" stroke="#B45309" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        </div>
+        <h3>Playbooks and tools built for scale</h3>
+        <p>Sector- and task-specific playbooks — plus automated delivery tools, in one environment built for speed, scale, and affordability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUDIENCE CARDS (bottom) ============ -->
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="pillars-head" id="delAudienceHead">
+      <div class="eyebrow" style="justify-content:center; display:flex;">Get started</div>
+      <h2>What you unlock, once you join us</h2>
+    </div>
+
+    <div class="audience-grid" id="delAudienceGrid">
+
+      <!-- MSME AUDIENCE CARD -->
+      <div class="audience-card" id="delMsmeCard">
+        <span class="aud-label" id="delMsmeAudLabel">For MSMEs</span>
+        <div id="delMsmePitch">
+          <p class="aud-intro">Get matched to the right consultant — beyond sector standard, your path is your own.</p>
+          <ul class="aud-benefits">
+            <li>Browse the full vetted consultant directory, with real filters</li>
+            <li>Get matched automatically from your diagnosis results</li>
+            <li>Track your active engagement in one place</li>
+            <li>Request specific expertise if nothing fits</li>
+          </ul>
+
+          <div class="scroll-teaser">
+            <button class="scroll-nav scroll-nav-prev" onclick="scrollTeaser(this, -1); return false;" aria-label="Previous">&#8249;</button>
+            <button class="scroll-nav scroll-nav-next" onclick="scrollTeaser(this, 1); return false;" aria-label="Next">&#8250;</button>
+            <div class="scroll-track">
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('msme');"><span class="mini-icon">💳</span><h5>Credit &amp; Lending Specialist</h5><span class="mini-meta">12 yrs · ★ 4.8</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('msme');"><span class="mini-icon">🛡</span><h5>Compliance &amp; DPDP Expert</h5><span class="mini-meta">8 yrs · ★ 4.9</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('msme');"><span class="mini-icon">🌍</span><h5>Export Readiness Consultant</h5><span class="mini-meta">15 yrs · ★ 4.7</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('msme');"><span class="mini-icon">💳</span><h5>Credit &amp; Lending Specialist</h5><span class="mini-meta">12 yrs · ★ 4.8</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('msme');"><span class="mini-icon">🛡</span><h5>Compliance &amp; DPDP Expert</h5><span class="mini-meta">8 yrs · ★ 4.9</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('msme');"><span class="mini-icon">🌍</span><h5>Export Readiness Consultant</h5><span class="mini-meta">15 yrs · ★ 4.7</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div data-requires-role="msme">
+          <div class="locked-panel" style="display:none; margin-bottom:0;"></div>
+          <div class="gated-content" style="display:none;">
+
+            <div class="expertise-recommend" id="expertiseRecommend" style="display:none;">
+              <span class="er-label">Based on your diagnosis, we recommend</span>
+              <div class="er-chips">
+                <span class="er-chip" onclick="applyRecommendedExpertise('compliance')">Compliance &amp; DPDP</span>
+                <span class="er-chip" onclick="applyRecommendedExpertise('credit')">Credit &amp; Lending</span>
+              </div>
+            </div>
+
+            <div class="filter-panel" id="deliverFilterPanel">
+              <div class="filter-group">
+                <label for="filterExpertise">Expertise</label>
+                <select id="filterExpertise" onchange="applyConsultantFilters()">
+                  <option value="all">All expertise</option>
+                  <option value="credit">Credit &amp; Lending</option>
+                  <option value="compliance">Compliance &amp; DPDP</option>
+                  <option value="export">Export Readiness</option>
+                  <option value="operations">Operations</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="filterSector">Sector</label>
+                <select id="filterSector" onchange="applyConsultantFilters()">
+                  <option value="all">All sectors</option>
+                  <option value="textiles">Textiles</option>
+                  <option value="auto">Auto Components</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="export">Export</option>
+                  <option value="food">Food Processing</option>
+                  <option value="handicrafts">Handicrafts</option>
+                  <option value="quality">Quality</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="filterRating">Minimum rating</label>
+                <select id="filterRating" onchange="applyConsultantFilters()">
+                  <option value="0">Any rating</option>
+                  <option value="4.5">4.5+ ★</option>
+                  <option value="4.7">4.7+ ★</option>
+                  <option value="4.8">4.8+ ★</option>
+                </select>
+              </div>
+              <div class="filter-group">
+                <label for="filterAvailability">Availability</label>
+                <select id="filterAvailability" onchange="applyConsultantFilters()">
+                  <option value="all">Any availability</option>
+                  <option value="available">Available now</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="consultant-grid" id="consultantGrid">
+              <div class="c-card" data-expertise="credit" data-sector="textiles auto" data-rating="4.8" data-availability="available">
+                <div class="c-avatar">PS</div>
+                <div>
+                  <h3 class="c-name">Priya Sharma</h3>
+                  <div class="c-role">Credit &amp; Lending Specialist</div>
+                  <div class="c-meta">12 yrs · 34 engagements · ★ 4.8 <span class="avail-tag available">Available now</span></div>
+                  <div class="c-tags"><span class="c-tag">Textiles</span><span class="c-tag">Auto Components</span></div>
+                  <a class="btn-sm-primary" href="#">View profile →</a>
+                </div>
+              </div>
+              <div class="c-card" data-expertise="compliance" data-sector="manufacturing export" data-rating="4.9" data-availability="available">
+                <div class="c-avatar">RK</div>
+                <div>
+                  <h3 class="c-name">Rajesh Kumar</h3>
+                  <div class="c-role">Compliance &amp; DPDP Expert</div>
+                  <div class="c-meta">8 yrs · 21 engagements · ★ 4.9 <span class="avail-tag available">Available now</span></div>
+                  <div class="c-tags"><span class="c-tag">Manufacturing</span><span class="c-tag">Export</span></div>
+                  <a class="btn-sm-primary" href="#">View profile →</a>
+                </div>
+              </div>
+              <div class="c-card" data-expertise="export" data-sector="food handicrafts" data-rating="4.7" data-availability="busy">
+                <div class="c-avatar">AD</div>
+                <div>
+                  <h3 class="c-name">Anita Desai</h3>
+                  <div class="c-role">Export Readiness Consultant</div>
+                  <div class="c-meta">15 yrs · 48 engagements · ★ 4.7 <span class="avail-tag busy">Booked till 20 Mar</span></div>
+                  <div class="c-tags"><span class="c-tag">Food Processing</span><span class="c-tag">Handicrafts</span></div>
+                  <a class="btn-sm-primary" href="#">View profile →</a>
+                </div>
+              </div>
+              <div class="c-card" data-expertise="operations" data-sector="manufacturing quality" data-rating="4.6" data-availability="available">
+                <div class="c-avatar">MV</div>
+                <div>
+                  <h3 class="c-name">Manoj Verma</h3>
+                  <div class="c-role">Operations &amp; Lean Specialist</div>
+                  <div class="c-meta">10 yrs · 27 engagements · ★ 4.6 <span class="avail-tag available">Available now</span></div>
+                  <div class="c-tags"><span class="c-tag">Manufacturing</span><span class="c-tag">Quality</span></div>
+                  <a class="btn-sm-primary" href="#">View profile →</a>
+                </div>
+              </div>
+            </div>
+            <div class="empty" id="consultantEmpty" role="status" aria-live="polite" style="display:none;">No consultants match those filters — try widening your search.</div>
+
+            <div class="request-callout" style="margin-top:20px; margin-bottom:0;">
+              <div>
+                <h3>Not sure who to pick?</h3>
+                <p>Take our Automated 360° Business Assessment — we'll match you automatically.</p>
+              </div>
+              <a class="btn btn-primary" href="#diagnose" onclick="goTo('diagnose'); return false;">Get diagnosed →</a>
+            </div>
+
+            <div class="request-callout" style="margin-top:20px; margin-bottom:0;">
+              <div>
+                <h3>Don't see the right expertise?</h3>
+                <p>Tell us the gap you're trying to close — we'll look for a consultant who fits, or bring one onto the network.</p>
+              </div>
+              <a class="btn btn-primary" href="#contact" onclick="goToContact(); return false;">Request expertise →</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- CONSULTANT AUDIENCE CARD -->
+      <div class="audience-card" id="delConsultantCard">
+        <span class="aud-label" id="delConsultantAudLabel">For Consultants</span>
+        <div id="delConsultantPitch">
+          <p class="aud-intro">Less time chasing leads, more time doing the work you're good at.</p>
+          <ul class="aud-benefits">
+            <li>Qualified engagement requests matched to your expertise</li>
+            <li>Diagnostic context on the client before you bid</li>
+            <li>Delivery tools and playbooks built for speed and scale</li>
+            <li>One dashboard for every active engagement</li>
+          </ul>
+
+          <div class="scroll-teaser">
+            <button class="scroll-nav scroll-nav-prev" onclick="scrollTeaser(this, -1); return false;" aria-label="Previous">&#8249;</button>
+            <button class="scroll-nav scroll-nav-next" onclick="scrollTeaser(this, 1); return false;" aria-label="Next">&#8250;</button>
+            <div class="scroll-track">
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('consultant');"><span class="mini-icon">🛡</span><h5>DPDP Compliance Readiness</h5><span class="mini-meta">Textile Mfr., Coimbatore · ₹25,000</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('consultant');"><span class="mini-icon">🔐</span><h5>Cybersecurity Readiness</h5><span class="mini-meta">Electronics Mfr., Bengaluru · ₹20,000</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('consultant');"><span class="mini-icon">🌍</span><h5>Export Documentation</h5><span class="mini-meta">Handicraft Exporter, Jaipur · ₹18,000</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('consultant');"><span class="mini-icon">🛡</span><h5>DPDP Compliance Readiness</h5><span class="mini-meta">Textile Mfr., Coimbatore · ₹25,000</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('consultant');"><span class="mini-icon">🔐</span><h5>Cybersecurity Readiness</h5><span class="mini-meta">Electronics Mfr., Bengaluru · ₹20,000</span></div>
+              <div class="mini-card" onclick="openAuthModal(); selectAuthRole('consultant');"><span class="mini-icon">🌍</span><h5>Export Documentation</h5><span class="mini-meta">Handicraft Exporter, Jaipur · ₹18,000</span></div>
+            </div>
+          </div>
+
+          <div class="request-callout" style="margin-top:22px; margin-bottom:0;" id="joinNetworkCard">
+            <div>
+              <h3>Not on the network yet?</h3>
+              <p>Vetted consultants get a steady pipeline of qualified engagements, and the tools to run them at scale.</p>
+            </div>
+            <a class="btn btn-primary" href="#contact" onclick="goToContact(); return false;">Join our network →</a>
+          </div>
+        </div>
+
+        <div data-requires-role="consultant">
+          <div class="locked-panel" style="display:none; margin-bottom:0;"></div>
+          <div class="gated-content" style="display:none;">
+            <div class="dash-section">
+              <div class="dash-head"><h3>Available Engagements</h3><span class="count">3 open</span></div>
+              <div class="engagement-row">
+                <div class="e-info"><h3>DPDP Compliance Readiness — Textile Manufacturer, Coimbatore</h3><div class="e-meta">Budget: ₹25,000 · Referred from diagnosis</div>
+                  <div class="e-snapshot"><b>Diagnostic snapshot:</b> Readiness score 42/100 (High risk) · Gaps flagged: no consent mechanism, no breach notification process, no data inventory</div>
+                </div>
+                <div><span class="status open">Open</span> <a class="btn-sm-primary" href="#">Bid / Accept</a></div>
+              </div>
+              <div class="engagement-row">
+                <div class="e-info"><h3>Cybersecurity Readiness — Electronics Manufacturer, Bengaluru</h3><div class="e-meta">Budget: ₹20,000 · Direct request</div></div>
+                <div><span class="status open">Open</span> <a class="btn-sm-primary" href="#">Bid / Accept</a></div>
+              </div>
+              <div class="engagement-row">
+                <div class="e-info"><h3>Export Documentation — Handicraft Exporter, Jaipur</h3><div class="e-meta">Budget: ₹18,000 · Referred from cohort</div></div>
+                <div><span class="status open">Open</span> <a class="btn-sm-primary" href="#">Bid / Accept</a></div>
+              </div>
+            </div>
+
+            <div class="dash-section">
+              <div class="dash-head"><h3>My Engagements</h3><span class="count">3 active</span></div>
+              <div class="engagement-row">
+                <div class="e-info"><h3>GST Compliance Cleanup — ABC Textiles</h3><div class="e-meta">Due 15 Mar</div></div>
+                <span class="status progress">In progress</span>
+              </div>
+              <div class="engagement-row">
+                <div class="e-info"><h3>Loan Packaging — XYZ Auto Parts</h3><div class="e-meta">Awaiting client documents</div></div>
+                <span class="status waiting">Waiting on client</span>
+              </div>
+              <div class="engagement-row">
+                <div class="e-info"><h3>DPDP Readiness — PQR Foods</h3><div class="e-meta">Delivered 2 Mar</div></div>
+                <span class="status done">Completed</span>
+              </div>
+            </div>
+
+            <div class="dash-section">
+              <div class="dash-head"><h3>Delivery Tools</h3><span class="count">Included with your network membership</span></div>
+              <div class="tools-grid">
+                <div class="tool-mini"><h3>DPR Generator</h3><p>Auto-draft project reports for your engagements.</p><a class="btn-sm-ghost" href="pmegp-dpr-generator.html">Open tool →</a></div>
+                <div class="tool-mini"><h3>Pricing Calculator</h3><p>Benchmark your quote against similar engagements.</p><a class="btn-sm-ghost" href="#">Open tool →</a></div>
+                <div class="tool-mini"><h3>Engagement Tracker</h3><p>One dashboard for every active client.</p><a class="btn-sm-ghost" href="#">Open tool →</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="aud-register-cta" id="delRegisterCta">
+      <button type="button" class="btn btn-primary" onclick="openAuthModal('register');">Register</button>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<div class="page-section" id="page-privacy">
+<div class="wrap">
+  <div class="hero">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="updated">Effective date: 1 January 2026 · Last updated: 1 January 2026</div>
+    <div class="notice">
+      🔒 Plain-language summary: we collect what we need to diagnose your business, match you to a cohort or consultant, and run the platform — we encrypt it, we don't sell it, and we only share it with your consent or as this policy describes.
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="toc">
+    <h2 class="toc-heading">Contents</h2>
+    <ol>
+      <li><a href="#" onclick="document.getElementById('scope').scrollIntoView({behavior:'smooth'}); return false;">Who this policy covers</a></li>
+      <li><a href="#" onclick="document.getElementById('collect').scrollIntoView({behavior:'smooth'}); return false;">Information we collect</a></li>
+      <li><a href="#" onclick="document.getElementById('use').scrollIntoView({behavior:'smooth'}); return false;">How we use your information</a></li>
+      <li><a href="#" onclick="document.getElementById('share').scrollIntoView({behavior:'smooth'}); return false;">When we share information</a></li>
+      <li><a href="#" onclick="document.getElementById('security').scrollIntoView({behavior:'smooth'}); return false;">How we protect your information</a></li>
+      <li><a href="#" onclick="document.getElementById('retention').scrollIntoView({behavior:'smooth'}); return false;">How long we keep it</a></li>
+      <li><a href="#" onclick="document.getElementById('rights').scrollIntoView({behavior:'smooth'}); return false;">Your rights</a></li>
+      <li><a href="#" onclick="document.getElementById('cookies').scrollIntoView({behavior:'smooth'}); return false;">Cookies and similar technologies</a></li>
+      <li><a href="#" onclick="document.getElementById('children').scrollIntoView({behavior:'smooth'}); return false;">Children's privacy</a></li>
+      <li><a href="#" onclick="document.getElementById('changes').scrollIntoView({behavior:'smooth'}); return false;">Changes to this policy</a></li>
+      <li><a href="#" onclick="document.getElementById('privacy-contact').scrollIntoView({behavior:'smooth'}); return false;">Contact us</a></li>
+    </ol>
+  </div>
+
+  <section class="doc">
+    <h2 id="scope">1. Who this policy covers</h2>
+    <p>This Privacy Policy explains how Launchpad Leaders ("we," "us," "our") collects, uses, shares, and protects information when you use our website and platform (Diagnose, Develop, and Deliver), whether you're an MSME owner, a forum or institute representative, an onboarded consultant, or simply browsing as a visitor. By using our platform, you agree to the practices described here.</p>
+
+    <h2 id="collect">2. Information we collect</h2>
+    <p>What we collect depends on how you use the platform:</p>
+    <table>
+      <thead><tr><th>Category</th><th>Examples</th></tr></thead>
+      <tbody>
+        <tr><td><b>Account information</b></td><td>Name, business name, phone number, email address, role (MSME / Forum / Consultant)</td></tr>
+        <tr><td><b>Business &amp; financial data</b></td><td>Turnover, bank statements, GST returns, existing loans, collateral, receivables, and other data you enter into our diagnostic tools</td></tr>
+        <tr><td><b>Diagnostic results</b></td><td>Assessment scores, flagged gaps, and recommendations generated by tools such as the 360° Business Assessment, Cybersecurity Readiness, or DPDP Compliance Readiness</td></tr>
+        <tr><td><b>Programme &amp; engagement data</b></td><td>Cohort enrolment, cluster participation, consultant engagement history and status</td></tr>
+        <tr><td><b>Usage data</b></td><td>Pages visited, tools used, and general interaction patterns on the platform</td></tr>
+      </tbody>
+    </table>
+    <p>We collect this directly from you (when you register, complete an assessment, or enrol in a programme) — we do not purchase or scrape business data from third parties.</p>
+
+    <h2 id="use">3. How we use your information</h2>
+    <ul>
+      <li>To generate your diagnostic assessments and reports</li>
+      <li>To match you with relevant cohorts, clusters, or consultants</li>
+      <li>To operate consultant engagements, including sharing relevant diagnostic context with a consultant you've been matched or referred to</li>
+      <li>To communicate with you about your account, assessments, or programmes</li>
+      <li>To improve the accuracy and relevance of our tools</li>
+      <li>To meet legal, regulatory, and compliance obligations</li>
+    </ul>
+    <p>We do not use your business or financial data to train third-party AI models, and we do not sell your data to advertisers or data brokers.</p>
+
+    <h2 id="share">4. When we share information</h2>
+    <p>We share information only in these circumstances:</p>
+    <ul>
+      <li><b>With your consent</b> — for example, when your diagnostic results are shared with a consultant you've chosen to engage</li>
+      <li><b>With co-delivery partners</b> — Forums, institutes, banks, or state bodies you're enrolled with may see programme-level data for cohorts they administer, not your individual financial details</li>
+      <li><b>With service providers</b> — vendors who help us operate the platform (hosting, payments, communications), bound by confidentiality obligations</li>
+      <li><b>For legal reasons</b> — if required by law, regulation, or a valid legal process</li>
+    </ul>
+    <p>We never sell your personal or business data to third parties for marketing purposes.</p>
+
+    <h2 id="security">5. How we protect your information</h2>
+    <p>We use encryption in transit and at rest, access controls limiting who can view your data, and role-based permissions so that, for example, a consultant only sees the diagnostic context relevant to an engagement they're matched to — not your full account. No system is completely immune to risk, and we continually work to strengthen our safeguards in line with the Digital Personal Data Protection (DPDP) Act, 2023.</p>
+
+    <h2 id="retention">6. How long we keep it</h2>
+    <p>We retain your information for as long as your account is active, or as needed to provide the services you've requested. If you close your account, we delete or anonymise your personal data within a reasonable period, except where we're required to retain it for legal, tax, or regulatory reasons.</p>
+
+    <h2 id="rights">7. Your rights</h2>
+    <p>Consistent with the DPDP Act, you have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Correct inaccurate or incomplete data</li>
+      <li>Withdraw consent for optional processing at any time</li>
+      <li>Request deletion of your data, subject to legal retention requirements</li>
+      <li>Nominate another individual to exercise these rights on your behalf in the event of death or incapacity</li>
+    </ul>
+    <p>To exercise any of these rights, contact us using the details below.</p>
+
+    <h2 id="cookies">8. Cookies and similar technologies</h2>
+    <p>We use cookies and similar technologies to keep you logged in, remember your preferences, and understand how the platform is used. You can control cookies through your browser settings; disabling them may limit some platform functionality.</p>
+
+    <h2 id="children">9. Children's privacy</h2>
+    <p>Our platform is intended for business owners, professionals, and institutional representatives. We do not knowingly collect personal data from individuals under 18.</p>
+
+    <h2 id="changes">10. Changes to this policy</h2>
+    <p>We may update this Privacy Policy from time to time. We'll post the revised version here with an updated effective date, and for material changes, we'll make reasonable efforts to notify registered users directly.</p>
+
+    <h2 id="privacy-contact">11. Contact us</h2>
+    <p>If you have questions about this policy or how your data is handled, reach us at:</p>
+    <p>
+      <b>Email:</b> <a href="mailto:connect@launchpadleaders.in">connect@launchpadleaders.in</a><br>
+      <b>Address:</b> Launchpad Leaders Private Limited, No.343, Reddy Complex, BGS Hospital Road, Global Village Back Gate, Mylasandra, Kengeri Hobli, Bangalore, Karnataka - 560059, India
+    </p>
+  </section>
+</div>
+</div>
+
+
+<div class="page-section" id="page-about">
+<section class="page-hero" style="background:linear-gradient(180deg, var(--amber-100, #FCE4D2) 0%, var(--paper-50) 100%); padding:64px 0 56px;">
+  <div class="wrap page-hero-inner">
+    <div class="eyebrow" style="color:var(--amber-500); display:flex; align-items:center; gap:10px; margin-bottom:16px;">About Us</div>
+    <h1 style="font-size:clamp(32px,4vw,50px); font-weight:700; line-height:1.08; max-width:720px; font-family:'Fraunces',serif;">Democratising growth for 79 million businesses — 1 in 5 on Earth.</h1>
+    <p style="margin-top:18px; font-size:17px; color:var(--paper-muted); max-width:640px; line-height:1.6;">India's MSMEs have always grown the hard way — without the tools, benchmarks, and networks bigger companies take for granted. We exist to close that gap, at the scale of an entire ecosystem.</p>
+  </div>
+</section>
+
+<section style="padding:64px 0;">
+  <div class="wrap" style="max-width:1000px;">
+    <div class="about-duo">
+      <div style="background:#FFFFFF; border:1px solid rgba(21,26,51,0.08); border-radius:20px; padding:32px;">
+        <div style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; font-size:28px; letter-spacing:-0.01em; color:var(--amber-500); margin-bottom:14px;">Our Vision</div>
+        <p style="font-size:16px; line-height:1.65; color:var(--paper-ink); margin:0;">We envision an India where the growth tools and networks once reserved for the largest players are democratised for every MSME — closing the gap to sector standard, and growing beyond, at the scale of an ecosystem.</p>
+      </div>
+      <div style="background:#FFFFFF; border:1px solid rgba(21,26,51,0.08); border-radius:20px; padding:32px;">
+        <div style="font-family:'Fraunces',serif; font-style:italic; font-weight:700; font-size:28px; letter-spacing:-0.01em; color:var(--amber-500); margin-bottom:14px;">Our Mission</div>
+        <p style="font-size:16px; line-height:1.65; color:var(--paper-ink); margin:0;">Diagnose. Develop. Deliver. Measurable transformation for every MSME in India — championing those underserved the longest, the platform built to lift an entire MSME ecosystem together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<svg style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="ic-engineering" viewBox="0 0 120 120"><rect x="12" y="88" width="96" height="9" rx="2" fill="currentColor" opacity=".8"/><rect x="18" y="60" width="30" height="28" rx="3" fill="currentColor" opacity=".55"/><rect x="48" y="68" width="9" height="14" rx="1.5" fill="#F2762E"/><rect x="57" y="71" width="34" height="8" rx="2" fill="currentColor" opacity=".38"/><rect x="91" y="62" width="14" height="26" rx="2.5" fill="currentColor" opacity=".55"/><path d="M40 60 V40 h34" stroke="currentColor" stroke-width="3.4" fill="none" opacity=".7" stroke-linecap="round"/><circle cx="74" cy="40" r="6" fill="#F2762E"/></symbol>
+    <symbol id="ic-textiles" viewBox="0 0 120 120"><rect x="12" y="88" width="96" height="9" rx="2" fill="currentColor" opacity=".8"/><path d="M22 88 V62 h14 V40 h48 a10 10 0 0 1 10 10 v38 h-14 V54 h-30 v34 z" fill="currentColor" opacity=".55"/><rect x="76" y="56" width="10" height="20" rx="2" fill="#F2762E"/><path d="M81 76 v8" stroke="#F2762E" stroke-width="2.4" stroke-linecap="round"/><path d="M44 84 q16 -10 34 -2" stroke="#F2762E" stroke-width="2.6" fill="none" stroke-linecap="round"/><circle cx="34" cy="50" r="7" fill="#F2762E" opacity=".85"/></symbol>
+    <symbol id="ic-food" viewBox="0 0 120 120"><rect x="12" y="92" width="96" height="8" rx="2" fill="currentColor" opacity=".8"/><path d="M30 34 h34 v40 a17 17 0 0 1 -34 0 z" fill="currentColor" opacity=".5"/><path d="M30 52 h34 v22 a17 17 0 0 1 -34 0 z" fill="#F2762E"/><path d="M64 44 h18 v22" stroke="currentColor" stroke-width="3.2" fill="none" opacity=".65" stroke-linecap="round"/><rect x="72" y="66" width="20" height="12" rx="2" fill="#F2762E" opacity=".85"/><g fill="currentColor" opacity=".4"><circle cx="76" cy="86" r="4"/><circle cx="88" cy="86" r="4"/></g><path d="M38 26 q5 -7 10 0" stroke="currentColor" stroke-width="2.4" fill="none" opacity=".45" stroke-linecap="round"/><path d="M52 24 q5 -7 10 0" stroke="currentColor" stroke-width="2.4" fill="none" opacity=".45" stroke-linecap="round"/></symbol>
+    <symbol id="ic-retail" viewBox="0 0 120 120"><rect x="14" y="90" width="92" height="8" rx="2" fill="currentColor" opacity=".8"/><path d="M18 52 h84 l-9 -16 h-66 z" fill="#F2762E"/><rect x="24" y="52" width="72" height="38" fill="currentColor" opacity=".5"/><rect x="33" y="60" width="22" height="30" rx="2" fill="#F7F8FC"/><rect x="64" y="60" width="23" height="17" rx="2" fill="#F7F8FC" opacity=".72"/></symbol>
+    <symbol id="ic-auto" viewBox="0 0 120 120"><g transform="translate(48,60)"><circle r="25" fill="none" stroke="currentColor" stroke-width="10" opacity=".5" stroke-dasharray="11 7.5"/><circle r="12" fill="none" stroke="currentColor" stroke-width="5" opacity=".5"/></g><g stroke="#F2762E" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M84 30 v60"/><path d="M84 38 h-14 v9 h14"/><path d="M84 74 h-20"/></g><circle cx="48" cy="60" r="5" fill="#F2762E"/></symbol>
+    <symbol id="ic-export" viewBox="0 0 120 120"><rect x="10" y="92" width="100" height="8" rx="2" fill="currentColor" opacity=".8"/><rect x="16" y="64" width="40" height="28" rx="2" fill="#F2762E"/><g stroke="#F7F8FC" stroke-width="1.8" opacity=".85"><path d="M24 68 v20"/><path d="M32 68 v20"/><path d="M40 68 v20"/><path d="M48 68 v20"/></g><rect x="60" y="64" width="40" height="28" rx="2" fill="currentColor" opacity=".5"/><g stroke="#F7F8FC" stroke-width="1.8" opacity=".5"><path d="M68 68 v20"/><path d="M76 68 v20"/><path d="M84 68 v20"/><path d="M92 68 v20"/></g><path d="M84 64 V26 H44" stroke="currentColor" stroke-width="3.4" fill="none" opacity=".65" stroke-linecap="round"/><path d="M44 26 v14" stroke="#F2762E" stroke-width="3.4" stroke-linecap="round"/><path d="M38 40 h12 v7 h-12 z" fill="#F2762E"/></symbol>
+  </defs>
+</svg>
+
+<section style="padding:0 0 64px;" aria-labelledby="whoWeServeHeading">
+  <div class="wrap" style="max-width:1000px;">
+    <div style="text-align:center;" data-reveal>
+      <div class="eyebrow" style="color:var(--amber-500); display:flex; justify-content:center; margin-bottom:12px;">Who we serve</div>
+      <h2 id="whoWeServeHeading" style="font-family:'Fraunces',serif; font-size:clamp(22px,2.6vw,30px); font-weight:600; margin:0 auto; max-width:660px;">Every sector where India makes, moves, and sells things.</h2>
+      <p style="margin:16px auto 0; max-width:720px; font-size:15.5px; line-height:1.65; color:var(--paper-muted);">Everything we build is calibrated sector by sector — a textile unit in Tiruppur and an auto-components unit in Pune don't need the same benchmark, the same cohort, or the same consultant.</p>
+    </div>
+
+    <div class="sector-panel" data-reveal>
+      <div class="sp-head">
+        <p class="sp-count" id="sectorCountLine"><b>61</b> sectors across <b>6</b> clusters</p>
+        <div class="sp-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 16 L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <label class="sr-only" for="sectorFilter">Filter the sector list</label>
+          <input type="search" id="sectorFilter" placeholder="Filter sectors…"
+                 autocomplete="off" oninput="filterSectors(this.value)">
+        </div>
+      </div>
+
+      <div class="sp-body">
+      <div class="sp-scroll" id="sectorScroll" tabindex="0" role="region"
+           aria-label="Sectors we serve. Scrollable list.">
+        <div class="sector-group" data-group="engineering">
+          <h3 class="sg-head">
+            <span class="sg-icon" aria-hidden="true"><svg viewBox="0 0 120 120"><rect x="12" y="88" width="96" height="9" rx="2" fill="currentColor" opacity=".8"/><rect x="18" y="60" width="30" height="28" rx="3" fill="currentColor" opacity=".55"/><rect x="48" y="68" width="9" height="14" rx="1.5" fill="#F2762E"/><rect x="57" y="71" width="34" height="8" rx="2" fill="currentColor" opacity=".38"/><rect x="91" y="62" width="14" height="26" rx="2.5" fill="currentColor" opacity=".55"/><path d="M40 60 V40 h34" stroke="currentColor" stroke-width="3.4" fill="none" opacity=".7" stroke-linecap="round"/><circle cx="74" cy="40" r="6" fill="#F2762E"/></svg></span>
+            <span class="sg-name">Engineering &amp; Machining</span>
+            <span class="sg-count">11</span>
+          </h3>
+          <ul class="sector-chips">
+            <li class="sector-chip" data-name="precision machining   cnc">Precision machining &amp; CNC</li>
+            <li class="sector-chip" data-name="sheet-metal fabrication">Sheet-metal fabrication</li>
+            <li class="sector-chip" data-name="die casting   foundry">Die casting &amp; foundry</li>
+            <li class="sector-chip" data-name="tool, die   mould making">Tool, die &amp; mould making</li>
+            <li class="sector-chip" data-name="industrial fasteners">Industrial fasteners</li>
+            <li class="sector-chip" data-name="pumps   valves">Pumps &amp; valves</li>
+            <li class="sector-chip" data-name="electric motors">Electric motors</li>
+            <li class="sector-chip" data-name="machine tools">Machine tools</li>
+            <li class="sector-chip" data-name="welding   structural fabrication">Welding &amp; structural fabrication</li>
+            <li class="sector-chip" data-name="surface treatment   plating">Surface treatment &amp; plating</li>
+            <li class="sector-chip" data-name="bearings   power transmission">Bearings &amp; power transmission</li>
+          </ul>
+        </div>
+        <div class="sector-group" data-group="textiles">
+          <h3 class="sg-head">
+            <span class="sg-icon" aria-hidden="true"><svg viewBox="0 0 120 120"><rect x="12" y="88" width="96" height="9" rx="2" fill="currentColor" opacity=".8"/><path d="M22 88 V62 h14 V40 h48 a10 10 0 0 1 10 10 v38 h-14 V54 h-30 v34 z" fill="currentColor" opacity=".55"/><rect x="76" y="56" width="10" height="20" rx="2" fill="#F2762E"/><path d="M81 76 v8" stroke="#F2762E" stroke-width="2.4" stroke-linecap="round"/><path d="M44 84 q16 -10 34 -2" stroke="#F2762E" stroke-width="2.6" fill="none" stroke-linecap="round"/><circle cx="34" cy="50" r="7" fill="#F2762E" opacity=".85"/></svg></span>
+            <span class="sg-name">Textiles &amp; Apparel</span>
+            <span class="sg-count">10</span>
+          </h3>
+          <ul class="sector-chips">
+            <li class="sector-chip" data-name="spinning   yarn">Spinning &amp; yarn</li>
+            <li class="sector-chip" data-name="weaving   power looms">Weaving &amp; power looms</li>
+            <li class="sector-chip" data-name="handloom   khadi">Handloom &amp; khadi</li>
+            <li class="sector-chip" data-name="knitwear   hosiery">Knitwear &amp; hosiery</li>
+            <li class="sector-chip" data-name="garment manufacturing">Garment manufacturing</li>
+            <li class="sector-chip" data-name="dyeing   processing">Dyeing &amp; processing</li>
+            <li class="sector-chip" data-name="technical textiles">Technical textiles</li>
+            <li class="sector-chip" data-name="home furnishings">Home furnishings</li>
+            <li class="sector-chip" data-name="embroidery   job work">Embroidery &amp; job work</li>
+            <li class="sector-chip" data-name="leather goods   footwear">Leather goods &amp; footwear</li>
+          </ul>
+        </div>
+        <div class="sector-group" data-group="food">
+          <h3 class="sg-head">
+            <span class="sg-icon" aria-hidden="true"><svg viewBox="0 0 120 120"><rect x="12" y="92" width="96" height="8" rx="2" fill="currentColor" opacity=".8"/><path d="M30 34 h34 v40 a17 17 0 0 1 -34 0 z" fill="currentColor" opacity=".5"/><path d="M30 52 h34 v22 a17 17 0 0 1 -34 0 z" fill="#F2762E"/><path d="M64 44 h18 v22" stroke="currentColor" stroke-width="3.2" fill="none" opacity=".65" stroke-linecap="round"/><rect x="72" y="66" width="20" height="12" rx="2" fill="#F2762E" opacity=".85"/><g fill="currentColor" opacity=".4"><circle cx="76" cy="86" r="4"/><circle cx="88" cy="86" r="4"/></g><path d="M38 26 q5 -7 10 0" stroke="currentColor" stroke-width="2.4" fill="none" opacity=".45" stroke-linecap="round"/><path d="M52 24 q5 -7 10 0" stroke="currentColor" stroke-width="2.4" fill="none" opacity=".45" stroke-linecap="round"/></svg></span>
+            <span class="sg-name">Food Processing</span>
+            <span class="sg-count">10</span>
+          </h3>
+          <ul class="sector-chips">
+            <li class="sector-chip" data-name="fruit   vegetable processing">Fruit &amp; vegetable processing</li>
+            <li class="sector-chip" data-name="dairy products">Dairy products</li>
+            <li class="sector-chip" data-name="bakery   confectionery">Bakery &amp; confectionery</li>
+            <li class="sector-chip" data-name="spices   condiments">Spices &amp; condiments</li>
+            <li class="sector-chip" data-name="edible oils">Edible oils</li>
+            <li class="sector-chip" data-name="rice   flour milling">Rice &amp; flour milling</li>
+            <li class="sector-chip" data-name="packaged snacks">Packaged snacks</li>
+            <li class="sector-chip" data-name="beverages   juices">Beverages &amp; juices</li>
+            <li class="sector-chip" data-name="meat, poultry   seafood">Meat, poultry &amp; seafood</li>
+            <li class="sector-chip" data-name="cold chain   food storage">Cold chain &amp; food storage</li>
+          </ul>
+        </div>
+        <div class="sector-group" data-group="retail">
+          <h3 class="sg-head">
+            <span class="sg-icon" aria-hidden="true"><svg viewBox="0 0 120 120"><rect x="14" y="90" width="92" height="8" rx="2" fill="currentColor" opacity=".8"/><path d="M18 52 h84 l-9 -16 h-66 z" fill="#F2762E"/><rect x="24" y="52" width="72" height="38" fill="currentColor" opacity=".5"/><rect x="33" y="60" width="22" height="30" rx="2" fill="#F7F8FC"/><rect x="64" y="60" width="23" height="17" rx="2" fill="#F7F8FC" opacity=".72"/></svg></span>
+            <span class="sg-name">Retail &amp; Distribution</span>
+            <span class="sg-count">10</span>
+          </h3>
+          <ul class="sector-chips">
+            <li class="sector-chip" data-name="fmcg distribution">FMCG distribution</li>
+            <li class="sector-chip" data-name="consumer electronics retail">Consumer electronics retail</li>
+            <li class="sector-chip" data-name="pharmacy   medical retail">Pharmacy &amp; medical retail</li>
+            <li class="sector-chip" data-name="apparel   lifestyle retail">Apparel &amp; lifestyle retail</li>
+            <li class="sector-chip" data-name="building materials   hardware">Building materials &amp; hardware</li>
+            <li class="sector-chip" data-name="agri-input distribution">Agri-input distribution</li>
+            <li class="sector-chip" data-name="automotive parts retail">Automotive parts retail</li>
+            <li class="sector-chip" data-name="e-commerce sellers">E-commerce sellers</li>
+            <li class="sector-chip" data-name="wholesale   cash-and-carry">Wholesale &amp; cash-and-carry</li>
+            <li class="sector-chip" data-name="speciality food retail">Speciality food retail</li>
+          </ul>
+        </div>
+        <div class="sector-group" data-group="auto">
+          <h3 class="sg-head">
+            <span class="sg-icon" aria-hidden="true"><svg viewBox="0 0 120 120"><g transform="translate(48,60)"><circle r="25" fill="none" stroke="currentColor" stroke-width="10" opacity=".5" stroke-dasharray="11 7.5"/><circle r="12" fill="none" stroke="currentColor" stroke-width="5" opacity=".5"/></g><g stroke="#F2762E" stroke-width="3.6" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M84 30 v60"/><path d="M84 38 h-14 v9 h14"/><path d="M84 74 h-20"/></g><circle cx="48" cy="60" r="5" fill="#F2762E"/></svg></span>
+            <span class="sg-name">Auto Components</span>
+            <span class="sg-count">10</span>
+          </h3>
+          <ul class="sector-chips">
+            <li class="sector-chip" data-name="engine components">Engine components</li>
+            <li class="sector-chip" data-name="transmission   driveline">Transmission &amp; driveline</li>
+            <li class="sector-chip" data-name="braking systems">Braking systems</li>
+            <li class="sector-chip" data-name="suspension components">Suspension components</li>
+            <li class="sector-chip" data-name="auto electricals">Auto electricals</li>
+            <li class="sector-chip" data-name="rubber   polymer parts">Rubber &amp; polymer parts</li>
+            <li class="sector-chip" data-name="sheet-metal   body parts">Sheet-metal &amp; body parts</li>
+            <li class="sector-chip" data-name="ev components   battery packs">EV components &amp; battery packs</li>
+            <li class="sector-chip" data-name="aftermarket   replacement parts">Aftermarket &amp; replacement parts</li>
+            <li class="sector-chip" data-name="two-wheeler components">Two-wheeler components</li>
+          </ul>
+        </div>
+        <div class="sector-group" data-group="export">
+          <h3 class="sg-head">
+            <span class="sg-icon" aria-hidden="true"><svg viewBox="0 0 120 120"><rect x="10" y="92" width="100" height="8" rx="2" fill="currentColor" opacity=".8"/><rect x="16" y="64" width="40" height="28" rx="2" fill="#F2762E"/><g stroke="#F7F8FC" stroke-width="1.8" opacity=".85"><path d="M24 68 v20"/><path d="M32 68 v20"/><path d="M40 68 v20"/><path d="M48 68 v20"/></g><rect x="60" y="64" width="40" height="28" rx="2" fill="currentColor" opacity=".5"/><g stroke="#F7F8FC" stroke-width="1.8" opacity=".5"><path d="M68 68 v20"/><path d="M76 68 v20"/><path d="M84 68 v20"/><path d="M92 68 v20"/></g><path d="M84 64 V26 H44" stroke="currentColor" stroke-width="3.4" fill="none" opacity=".65" stroke-linecap="round"/><path d="M44 26 v14" stroke="#F2762E" stroke-width="3.4" stroke-linecap="round"/><path d="M38 40 h12 v7 h-12 z" fill="#F2762E"/></svg></span>
+            <span class="sg-name">Export &amp; Logistics</span>
+            <span class="sg-count">10</span>
+          </h3>
+          <ul class="sector-chips">
+            <li class="sector-chip" data-name="merchant exporters">Merchant exporters</li>
+            <li class="sector-chip" data-name="handicrafts   home d cor">Handicrafts &amp; home d&eacute;cor</li>
+            <li class="sector-chip" data-name="gems   jewellery">Gems &amp; jewellery</li>
+            <li class="sector-chip" data-name="marine products export">Marine products export</li>
+            <li class="sector-chip" data-name="agri   spice export">Agri &amp; spice export</li>
+            <li class="sector-chip" data-name="freight forwarding">Freight forwarding</li>
+            <li class="sector-chip" data-name="customs brokerage (cha)">Customs brokerage (CHA)</li>
+            <li class="sector-chip" data-name="warehousing   3pl">Warehousing &amp; 3PL</li>
+            <li class="sector-chip" data-name="packaging   crating">Packaging &amp; crating</li>
+            <li class="sector-chip" data-name="last-mile   courier">Last-mile &amp; courier</li>
+          </ul>
+        </div>
+        <p class="sp-empty" id="sectorEmpty" role="status" aria-live="polite">
+          No sector matches that search. Try a broader term — or
+          <a href="#contact" onclick="goToContact(); return false;">ask us directly</a>.
+        </p>
+      </div>
+
+      <div class="sector-ticker" id="sectorTicker" hidden aria-hidden="true">
+        <div class="sector-ticker-track" id="sectorTickerTrack"></div>
+      </div>
+      </div>
+    </div>
+
+    <p class="sp-foot">Not listed? Our assessment engine calibrates to adjacent sectors —
+      <a href="#contact" onclick="goToContact(); return false;">talk to us about yours</a>.</p>
+  </div>
+</section>
+
+<section style="background:var(--ink-950); padding:64px 0;">
+  <div class="wrap" style="max-width:1000px;">
+    <div style="text-align:center; margin-bottom:40px;">
+      <div class="eyebrow" style="color:var(--cyan-300); justify-content:center; display:flex; margin-bottom:12px;">The stakes</div>
+      <h2 style="font-family:'Fraunces',serif; font-size:clamp(24px,2.8vw,34px); font-weight:600; color:#FFFFFF; max-width:720px; margin:0 auto;">India is racing towards a $10 trillion economy. MSMEs are the engine — and most are still running on one cylinder.</h2>
+    </div>
+    <div class="about-stats">
+      <div style="text-align:center;">
+        <div style="font-family:'Fraunces',serif; font-size:30px; font-weight:700; color:var(--stage-diagnose); white-space:nowrap;">$4T <span style="font-size:20px; color:var(--off-white-dim); font-weight:400;">→</span> $10T</div>
+        <div style="font-size:12.5px; color:var(--off-white-dim); margin-top:6px; line-height:1.5;">India's economy today, projected to reach $10 trillion by 2035</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Fraunces',serif; font-size:30px; font-weight:700; color:var(--stage-diagnose); white-space:nowrap;">31% <span style="font-size:20px; color:var(--off-white-dim); font-weight:400;">→</span> 55%</div>
+        <div style="font-size:12.5px; color:var(--off-white-dim); margin-top:6px; line-height:1.5;">MSMEs' share of India's GDP today, vs. the ~55% SMEs contribute in developed economies</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Fraunces',serif; font-size:36px; font-weight:700; color:var(--stage-diagnose);">110M+</div>
+        <div style="font-size:12.5px; color:var(--off-white-dim); margin-top:6px; line-height:1.5;">Jobs MSMEs create today — the single largest engine of Indian employment</div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Fraunces',serif; font-size:36px; font-weight:700; color:var(--stage-diagnose);">79M+</div>
+        <div style="font-size:12.5px; color:var(--off-white-dim); margin-top:6px; line-height:1.5;">MSMEs across India — most still without formal credit, cohort learning, or expert guidance</div>
+      </div>
+    </div>
+    <p style="text-align:center; font-size:15px; color:var(--off-white-dim); max-width:680px; margin:0 auto; line-height:1.6;">For India to reach $10 trillion, the MSME engine can't just run — it has to fire on every cylinder. That's the gap we exist to close.</p>
+    <p style="text-align:center; font-family:'Fraunces',serif; font-style:italic; font-size:clamp(20px,2.6vw,28px); font-weight:700; color:var(--stage-diagnose); max-width:640px; margin:40px auto 0; line-height:1.45; letter-spacing:0.01em;">The road is long, the work is hard.<br><span style="font-weight:800; font-size:1.15em;">Rise.</span> We race it together.</p>
+  </div>
+</section>
+
+<section style="padding:64px 0;">
+  <div class="wrap" style="max-width:1000px;">
+    <div class="team-block">
+      <div style="font-family:'Inter',system-ui,sans-serif; font-weight:800; font-size:28px; letter-spacing:-0.02em; color:var(--paper-ink); text-align:center; margin-bottom:26px;">Meet the team</div>
+      <div class="team-grid">
+        <div class="team-card">
+          <img class="team-photo" src="data:image/jpeg;base64,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" alt="Sudhindra S Paraki">
+          <h3>Sudhindra S Paraki</h3>
+          <div class="team-role">Co-founder, Principal Consultant</div>
+        </div>
+        <div class="team-card">
+          <img class="team-photo" src="data:image/jpeg;base64,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" alt="Pramod D'Souza">
+          <h3>Pramod D'Souza</h3>
+          <div class="team-role">Co-founder, Principal Consultant</div>
+        </div>
+      </div>
+
+      <div class="advisors-label">Principal Advisors</div>
+      <div class="advisors-row">
+        <div class="advisor-chip">Prasanna M</div>
+        <div class="advisor-chip">Ravi Prakash</div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+</div>
+
 </main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo logo-block">
+      <img class="logo-full logo-full-footer" src="data:image/png;base64,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" alt="Launchpad Leaders — The MSME Transformation Platform">
+      <div class="logo-tagline-wrap">
+        <div class="logo-tagline">DIAGNOSE / DEVELOP / DELIVER</div>
+      </div>
+    </div>
+    <div class="foot-links">
+      <a href="#overview" onclick="goTo('overview'); return false;">Home</a>
+      <a href="#diagnose" onclick="goTo('diagnose'); return false;">Diagnose</a>
+      <a href="#develop" onclick="goTo('develop'); return false;">Develop</a>
+      <a href="#deliver" onclick="goTo('deliver'); return false;">Deliver</a>
+      <a href="#about" onclick="goTo('about'); return false;">About</a>
+      <a href="#contact" onclick="goToContact(); return false;">Contact</a>
+    </div>
+    <div class="social-row">
+      <a href="https://x.com/Lauchpadleaders" target="_blank" rel="noopener noreferrer" class="social-icon si-x" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4l16 16M20 4L4 20" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/></svg>
+      </a>
+      <a href="http://www.linkedin.com/in/launchpadleaders" target="_blank" rel="noopener noreferrer" class="social-icon si-linkedin" aria-label="LinkedIn">
+        <svg viewBox="4 4 16 15" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="6.9" cy="6.3" r="1.7" fill="#FFFFFF"/><path d="M5.6 10v8.3h2.7V10H5.6zM11 10v8.3h2.7v-4.5c0-1.2.9-2 2-2s1.8.8 1.8 2v4.5h2.7v-4.9c0-2.6-1.6-3.8-3.6-3.8-1.6 0-2.3 1-2.7 1.6V10H11z" fill="#FFFFFF"/></svg>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61593339583288" target="_blank" rel="noopener noreferrer" class="social-icon si-facebook" aria-label="Facebook">
+        <svg viewBox="6 2 12 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 21v-7h2.5l.5-3H14V9c0-.9.3-1.5 1.7-1.5H17V4.8c-.3 0-1.2-.1-2.3-.1-2.3 0-3.7 1.4-3.7 3.9V11H8.5v3H11v7h3z" fill="#FFFFFF"/></svg>
+      </a>
+      <a href="https://www.instagram.com/launchpadleaders_/" target="_blank" rel="noopener noreferrer" class="social-icon si-instagram" aria-label="Instagram">
+        <svg viewBox="3 3 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="16" height="16" rx="5" stroke="#FFFFFF" stroke-width="1.9"/><circle cx="12" cy="12" r="3.8" stroke="#FFFFFF" stroke-width="1.9"/><circle cx="16.4" cy="7.6" r="1.1" fill="#FFFFFF"/></svg>
+      </a>
+      <a href="#" class="social-icon si-youtube" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 6.5l10 5.5-10 5.5z" fill="#FFFFFF"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="trust-line">
+      <svg class="trust-icon" width="14" height="16" viewBox="0 0 14 16" fill="none"><path d="M7 1L1 3.5V7.5C1 11 3.5 13.7 7 15C10.5 13.7 13 11 13 7.5V3.5L7 1Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+      Your data is encrypted and confidential — handled in line with DPDP, never sold or shared without your consent.
+    </div>
+    <div class="legal-copy">© 2026 Launchpad Leaders™. All rights reserved. All content on this website, including text, graphics, logos, images, tools, and software, is the property of Launchpad Leaders™ or its content suppliers and is protected under applicable copyright and trademark laws. Unauthorised use, reproduction, or distribution without prior written permission from Launchpad Leaders™ is strictly prohibited. <a href="#privacy" onclick="goTo('privacy'); return false;" class="legal-link">Privacy Policy</a></div>
+  </div>
+</footer>
+
+<!-- ============ MSME ASSIST (floating chat widget, global) ============ -->
+<div id="msme-assist-launcher" role="button" tabindex="0"
+     aria-expanded="false" aria-controls="msme-assist-panel" aria-label="Open MSME Assist"
+     onclick="toggleAssist()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAssist();}">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" id="assist-icon-chat">
+    <path d="M4 5h16v11H8l-4 4V5z" stroke="#FFFFFF" stroke-width="1.8" stroke-linejoin="round"/>
+    <circle cx="9" cy="10.5" r="1" fill="#FFFFFF"/>
+    <circle cx="13" cy="10.5" r="1" fill="#FFFFFF"/>
+    <circle cx="17" cy="10.5" r="1" fill="#FFFFFF"/>
+  </svg>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" id="assist-icon-close" style="display:none;">
+    <path d="M5 5L19 19M19 5L5 19" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  </svg>
+</div>
+
+<div id="msme-assist-panel">
+  <div class="ma-header">
+    <div class="ma-header-left">
+      <svg width="20" height="24" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 32 L14.12 25 L16.2 13.18 L22.21 7.17" stroke="#FCD34D" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <polygon points="25.39,3.99 23.91,8.87 20.51,5.47" fill="#FCD34D"/>
+      </svg>
+      <div>
+        <div class="ma-title">MSME Assist</div>
+        <div class="ma-subtitle">Schemes, platform &amp; more</div>
+      </div>
+    </div>
+    <div class="ma-close" onclick="toggleAssist()">✕</div>
+  </div>
+
+  <div class="ma-body" id="ma-body" role="log" aria-live="polite" aria-label="Conversation">
+    <div class="ma-msg ma-bot">
+      <div class="ma-bubble">Hi! I'm MSME Assist. Ask me about government schemes (PMEGP, Udyam, CGTMSE...) or how Launchpad Leaders works — I'll do my best to help.</div>
+    </div>
+    <div class="ma-chips" id="ma-chips">
+      <button class="ma-chip" onclick="maAsk('What is PMEGP?')">What is PMEGP?</button>
+      <button class="ma-chip" onclick="maAsk('How do I register on Udyam?')">Udyam registration</button>
+      <button class="ma-chip" onclick="maAsk('What does Diagnose do?')">What is Diagnose?</button>
+      <button class="ma-chip" onclick="maAsk('Is the assessment free?')">Is it free?</button>
+    </div>
+  </div>
+
+  <div class="ma-input-row">
+    <label class="sr-only" for="ma-input">Ask MSME Assist a question</label>
+  <input type="text" id="ma-input" aria-label="Ask MSME Assist a question" placeholder="Ask about a scheme or the platform…" onkeydown="if(event.key==='Enter'){maSend();}">
+    <button class="ma-send" onclick="maSend()">→</button>
+  </div>
+  <div class="ma-disclaimer">MSME Assist answers from a curated knowledge base — for anything else, our team is a message away.</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="script0.js"></script>
+<script src="script2.js"></script>
+<script src="script3.js"></script>
+<script src="script4.js"></script>
 </body>
 </html>
