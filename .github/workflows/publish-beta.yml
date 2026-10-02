@@ -1,0 +1,64 @@
+name: Build and publish beta
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out private source
+        uses: actions/checkout@v4
+        with:
+          repository: Launchpadleaders/MSME-Platform
+          ref: beta-static-build
+          token: ${{ secrets.SOURCE_READ_TOKEN }}
+          path: src
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        working-directory: src/website_1.0v_Containerized
+        run: npm install --no-audit --no-fund
+
+      - name: Build static site
+        working-directory: src/website_1.0v_Containerized
+        run: npm run build
+        env:
+          STATIC_BUILD: "1"
+          STATIC_BASE: /msme-beta-site/
+
+      - name: Prepare Pages files
+        working-directory: src/website_1.0v_Containerized/.output/public
+        run: |
+          if [ ! -f index.html ] && [ -f _shell.html ]; then cp _shell.html index.html; fi
+          if [ -f _shell.html ]; then cp _shell.html 404.html; else cp index.html 404.html; fi
+          touch .nojekyll
+          ls
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: src/website_1.0v_Containerized/.output/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
