@@ -262,6 +262,41 @@
 </style>
 </head>
 <body>
+<!-- Beta access gate (soft gate: user ID + SHA-256 hash only; no plaintext password) -->
+<div id="llbGate" style="position:fixed;inset:0;background:#fff;z-index:99999;display:flex;align-items:center;justify-content:center">
+<form id="llbForm" style="display:grid;gap:8px;width:260px;font-family:sans-serif">
+<h3 style="margin:0 0 4px">Launchpad Leaders Beta</h3>
+<input id="llbU" placeholder="User ID" autocomplete="username">
+<input id="llbP" type="password" placeholder="Password" autocomplete="current-password">
+<button type="submit">Enter</button>
+<small id="llbErr" style="color:#c00"></small>
+</form>
+</div>
+<script>
+(function(){
+var USER = "LLeaderBA";
+var HASH = "a74e95b29a882fa7137209cd2b56e23a9fd123eee25c428cb3370a3ede86be3f";
+function unlock(){ var g = document.getElementById("llbGate"); if (g) g.remove(); }
+function ok(){ try { return sessionStorage.getItem("llb_ok") === "1"; } catch(e) { return false; } }
+async function sha(s){
+var b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
+return Array.from(new Uint8Array(b)).map(function(x){ return x.toString(16).padStart(2,"0"); }).join("");
+}
+if (ok()) { unlock(); }
+document.getElementById("llbForm").addEventListener("submit", async function(e){
+e.preventDefault();
+var u = document.getElementById("llbU").value;
+var p = document.getElementById("llbP").value;
+if (u === USER && (await sha(p)) === HASH) {
+try { sessionStorage.setItem("llb_ok","1"); } catch(err) {}
+unlock();
+} else {
+document.getElementById("llbErr").textContent = "Invalid credentials";
+}
+});
+})();
+</script>
+
 
 <header>
   <div class="wrap bar">
