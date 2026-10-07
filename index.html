@@ -2011,5 +2011,16 @@ document.getElementById("llbErr").textContent = "Invalid credentials";
 <script src="script2.js"></script>
 <script src="script3.js"></script>
 <script src="script4.js"></script>
+<!-- beta-login-off: site login/OTP needs a backend that GitHub Pages does not have. Access to the beta is controlled by the beta access gate above. -->
+<style>
+[onclick*="openAuthModal"]{display:none !important}
+#authModalOverlay{display:none !important}
+</style>
+<script>
+(function(){
+window.openAuthModal = function(){ return false; };
+window.requireAuthThenGo = function(url){ if (url) { window.location.href = url; } return false; };
+})();
+</script>
 </body>
 </html>
